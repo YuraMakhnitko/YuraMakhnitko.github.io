@@ -2,7 +2,7 @@
   "name": "sushi-shop",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://YuraMakhnitko.github.io/YuraMakhnitko.github.io",
+  "homepage": "https://github.com/YuraMakhnitko/YuraMakhnitko.github.io",
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.2",
     "@testing-library/jest-dom": "^5.16.5",
