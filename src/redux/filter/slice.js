@@ -1,0 +1,92 @@
+import { createSlice } from "@reduxjs/toolkit";
+
+import goodsItems from "../settings/goodsData.json";
+import goodsItemsToSet from "../settings/goodsData.json";
+
+// const goodsFromFetch = fetch("http://localhost:3000/goodsData.json")
+//   .then((res) => {
+//     return res.json();
+//   })
+//   .then((res) => {
+//     return res;
+//   });
+
+// console.log(goodsFromFetch);
+
+const goodsToSet = JSON.parse(JSON.stringify(goodsItemsToSet));
+
+const category = {
+  title: "Pizza",
+  categoryId: 1,
+  imgUrl: "img/icons/pizza.svg",
+  imgBigUrl: "img/categories/pizza.jpg",
+  isSoon: false,
+};
+
+const goodsSetted = goodsItems.filter(
+  (good) => good.category === category.categoryId
+);
+const goodsBoofer = goodsItems.filter(
+  (good) => good.category === category.categoryId
+);
+
+const sort = { titleFilter: "By default", field: null, desk: 0 };
+
+const initialState = {
+  category,
+  searchValue: "",
+  sort,
+  openPopUp: false,
+  goodsToSet,
+  goodsBoofer,
+  goodsSetted,
+};
+
+export const filterSlice = createSlice({
+  name: "filters",
+  initialState,
+  reducers: {
+    setCategory(state, action) {
+      state.category = action.payload;
+      state.goodsSetted = state.goodsToSet.filter(
+        (good) => good.category === action.payload.categoryId
+      );
+
+      state.goodsBoofer = state.goodsToSet.filter(
+        (good) => good.category === state.category.categoryId
+      );
+    },
+    setGoods(state, action) {
+      // state.goodsSetted = action.payload;
+    },
+    setSearchValue(state, action) {
+      state.searchValue = action.payload;
+
+      state.searchValue
+        ? (state.goodsSetted = state.goodsBoofer.filter((item) =>
+            item.title.toLowerCase().includes(state.searchValue)
+          ))
+        : (state.goodsSetted = state.goodsBoofer);
+    },
+    setSort(state, action) {
+      state.sort = action.payload;
+      state.sort.titleFilter !== "By default"
+        ? (state.goodsSetted = state.goodsSetted.sort((a, b) =>
+            a[state.sort.field] > b[state.sort.field]
+              ? 1 * state.sort.desk
+              : -1 * state.sort.desk
+          ))
+        : (state.goodsSetted = state.goodsBoofer);
+
+      state.openPopUp = false;
+    },
+    setOpenPopUp(state, action) {
+      state.openPopUp = action.payload;
+    },
+  },
+});
+
+export const { setSearchValue, setSort, setOpenPopUp, setCategory, setGoods } =
+  filterSlice.actions;
+
+export default filterSlice.reducer;

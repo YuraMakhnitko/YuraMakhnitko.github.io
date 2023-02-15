@@ -1,0 +1,632 @@
+[
+  {
+    "title": "Chicken Pizza",
+    "weight": 1270,
+    "pieces": 23,
+    "category": 1,
+    "price": 155,
+    "id": 110,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/10.jpg"
+  },
+  {
+    "title": "Tomato Pizza",
+    "weight": 1270,
+    "pieces": 20,
+    "category": 1,
+    "price": 145,
+    "id": 111,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/11.jpg"
+  },
+  {
+    "title": "Olive Pizza",
+    "weight": 1270,
+    "pieces": 26,
+    "category": 1,
+    "price": 189,
+    "id": 112,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/12.jpg"
+  },
+  {
+    "title": "Pepperoni Pizza",
+    "weight": 1270,
+    "pieces": 26,
+    "category": 1,
+    "price": 165,
+    "id": 113,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/13.jpg"
+  },
+  {
+    "title": "Four-Seasons Pizza",
+    "weight": 1270,
+    "pieces": 30,
+    "category": 1,
+    "price": 135,
+    "id": 114,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/14.jpg"
+  },
+  {
+    "title": "Cheese Pizza ",
+    "weight": 1270,
+    "pieces": 23,
+    "category": 1,
+    "price": 199,
+    "id": 115,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/15.jpg"
+  },
+  {
+    "title": "Romano Pizza",
+    "weight": 1270,
+    "pieces": 20,
+    "category": 1,
+    "price": 179,
+    "id": 116,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/16.jpg"
+  },
+  {
+    "title": "Calzone Pizza",
+    "weight": 1270,
+    "pieces": 26,
+    "category": 1,
+    "price": 155,
+    "id": 117,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/17.jpg"
+  },
+  {
+    "title": "Napoletana Pizza",
+    "weight": 1270,
+    "pieces": 30,
+    "category": 1,
+    "price": 169,
+    "id": 118,
+    "composition": "Tomato sauce, mozzarella cheese, tomatoes",
+    "imgUrl": "img/goods/18.jpg"
+  },
+  {
+    "title": "Emperor’s Makisushi",
+    "weight": 1500,
+    "pieces": 30,
+    "category": 2,
+    "price": 299,
+    "id": 101,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/01.png"
+  },
+  {
+    "title": "Maguro Set",
+    "weight": 1120,
+    "pieces": 40,
+    "category": 2,
+    "price": 315,
+    "id": 102,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/02.png"
+  },
+  {
+    "title": "Aspara-Gusto Set",
+    "weight": 1260,
+    "pieces": 36,
+    "category": 2,
+    "price": 299,
+    "id": 103,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/03.png"
+  },
+  {
+    "title": "Royal Tiger Set",
+    "weight": 1320,
+    "pieces": 46,
+    "category": 2,
+    "price": 335,
+    "id": 104,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/04.png"
+  },
+  {
+    "title": "Top Set",
+    "weight": 1020,
+    "pieces": 60,
+    "category": 2,
+    "price": 275,
+    "id": 105,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/05.png"
+  },
+  {
+    "title": "Kamikaze Set",
+    "weight": 1200,
+    "pieces": 52,
+    "category": 2,
+    "price": 365,
+    "id": 106,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/06.png"
+  },
+  {
+    "title": "Extra Crunch Set",
+    "weight": 1120,
+    "pieces": 36,
+    "category": 2,
+    "price": 349,
+    "id": 107,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/07.png"
+  },
+  {
+    "title": "Dragon Fire Set",
+    "weight": 1000,
+    "pieces": 40,
+    "category": 2,
+    "price": 315,
+    "id": 108,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/08.png"
+  },
+  {
+    "title": "Dynamite Bombs Set",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 2,
+    "price": 299,
+    "id": 109,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/09.png"
+  },
+  {
+    "title": "Beef and Broccoli",
+    "weight": 700,
+    "pieces": 1,
+    "category": 3,
+    "price": 259,
+    "id": 200,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/500.jpg"
+  },
+  {
+    "title": "Dan Dan Noodles",
+    "weight": 770,
+    "pieces": 1,
+    "category": 3,
+    "price": 225,
+    "id": 201,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/501.jpg"
+  },
+  {
+    "title": "Vegetable Stir-Fry",
+    "weight": 640,
+    "pieces": 1,
+    "category": 3,
+    "price": 239,
+    "id": 202,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/502.jpg"
+  },
+  {
+    "title": "Yakisoba Chicken",
+    "weight": 670,
+    "pieces": 1,
+    "category": 3,
+    "price": 299,
+    "id": 203,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/503.jpg"
+  },
+  {
+    "title": "Garlic Shrimp",
+    "weight": 289,
+    "pieces": 1,
+    "category": 3,
+    "price": 299,
+    "id": 204,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/504.jpg"
+  },
+  {
+    "title": "Pad Thai",
+    "weight": 710,
+    "pieces": 1,
+    "category": 3,
+    "price": 239,
+    "id": 205,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/505.jpg"
+  },
+  {
+    "title": "Lo Mein",
+    "weight": 550,
+    "pieces": 1,
+    "category": 3,
+    "price": 215,
+    "id": 206,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/506.jpg"
+  },
+  {
+    "title": "Chow Mein",
+    "weight": 770,
+    "pieces": 1,
+    "category": 3,
+    "price": 249,
+    "id": 207,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/507.jpg"
+  },
+  {
+    "title": "Sesame Beef",
+    "weight": 800,
+    "pieces": 1,
+    "category": 3,
+    "price": 349,
+    "id": 208,
+    "composition": "Transparent noodles, Thai sauce, seafood mix",
+    "imgUrl": "img/goods/508.jpg"
+  },
+  {
+    "title": "Rainbow Roll",
+    "weight": 900,
+    "pieces": 46,
+    "category": 4,
+    "price": 360,
+    "id": 300,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/401.jpg"
+  },
+  {
+    "title": "California Roll",
+    "weight": 850,
+    "pieces": 46,
+    "category": 4,
+    "price": 299,
+    "id": 301,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/402.jpg"
+  },
+  {
+    "title": "Spicy tuna Roll",
+    "weight": 770,
+    "pieces": 46,
+    "category": 4,
+    "price": 310,
+    "id": 302,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/403.jpg"
+  },
+  {
+    "title": "Spider Roll",
+    "weight": 690,
+    "pieces": 46,
+    "category": 4,
+    "price": 289,
+    "id": 303,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/404.jpg"
+  },
+  {
+    "title": "King crab Roll",
+    "weight": 710,
+    "pieces": 46,
+    "category": 4,
+    "price": 259,
+    "id": 304,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/405.jpg"
+  },
+  {
+    "title": "Dragon Roll",
+    "weight": 870,
+    "pieces": 46,
+    "category": 4,
+    "price": 349,
+    "id": 305,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/407.jpg"
+  },
+  {
+    "title": "Boston Roll",
+    "weight": 740,
+    "pieces": 46,
+    "category": 4,
+    "price": 315,
+    "id": 306,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/408.jpg"
+  },
+  {
+    "title": "Alaska Roll",
+    "weight": 810,
+    "pieces": 46,
+    "category": 4,
+    "price": 289,
+    "id": 307,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/409.jpg"
+  },
+  {
+    "title": "Philly Roll",
+    "weight": 770,
+    "pieces": 46,
+    "category": 4,
+    "price": 369,
+    "id": 308,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/411.jpg"
+  },
+  {
+    "title": "Spicy Tuna",
+    "weight": 490,
+    "pieces": 46,
+    "category": 5,
+    "price": 215,
+    "id": 400,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/301.jpg"
+  },
+  {
+    "title": "Tamago Nigiri",
+    "weight": 550,
+    "pieces": 46,
+    "category": 5,
+    "price": 235,
+    "id": 401,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/303.jpg"
+  },
+  {
+    "title": "Caterpillar Eel",
+    "weight": 590,
+    "pieces": 46,
+    "category": 5,
+    "price": 275,
+    "id": 402,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/307.jpg"
+  },
+  {
+    "title": "Maguro Nigiri",
+    "weight": 540,
+    "pieces": 46,
+    "category": 5,
+    "price": 369,
+    "id": 403,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/309.jpg"
+  },
+  {
+    "title": "Crunchy Spider",
+    "weight": 770,
+    "pieces": 46,
+    "category": 5,
+    "price": 249,
+    "id": 404,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/313.jpg"
+  },
+  {
+    "title": "Volcano Lava",
+    "weight": 510,
+    "pieces": 46,
+    "category": 5,
+    "price": 225,
+    "id": 405,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/316.jpg"
+  },
+  {
+    "title": "Kani Nigiri",
+    "weight": 490,
+    "pieces": 46,
+    "category": 5,
+    "price": 369,
+    "id": 215,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/317.jpg"
+  },
+  {
+    "title": "Unagi Nigiri",
+    "weight": 510,
+    "pieces": 46,
+    "category": 5,
+    "price": 249,
+    "id": 407,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/319.jpg"
+  },
+  {
+    "title": "Surf and Turf",
+    "weight": 550,
+    "pieces": 46,
+    "category": 5,
+    "price": 259,
+    "id": 408,
+    "composition": "Rice, nori, eel, unagi sauce and sesame",
+    "imgUrl": "img/goods/320.jpg"
+  },
+  {
+    "title": "Sumo Dog",
+    "weight": 300,
+    "pieces": 1,
+    "category": 8,
+    "price": 115,
+    "id": 800,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/800.jpg"
+  },
+  {
+    "title": "Hungry Wolf",
+    "weight": 270,
+    "pieces": 1,
+    "category": 8,
+    "price": 99,
+    "id": 801,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/801.jpg"
+  },
+  {
+    "title": "Friendly Dog",
+    "weight": 330,
+    "pieces": 1,
+    "category": 8,
+    "price": 125,
+    "id": 802,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/802.jpg"
+  },
+  {
+    "title": "Trolley Dog",
+    "weight": 300,
+    "pieces": 1,
+    "category": 8,
+    "price": 115,
+    "id": 803,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/803.jpg"
+  },
+  {
+    "title": "City Dog",
+    "weight": 270,
+    "pieces": 1,
+    "category": 8,
+    "price": 99,
+    "id": 804,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/804.jpg"
+  },
+  {
+    "title": "Cheese Dog",
+    "weight": 249,
+    "pieces": 1,
+    "category": 8,
+    "price": 89,
+    "id": 805,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/805.jpg"
+  },
+  {
+    "title": "Delicious Dog",
+    "weight": 310,
+    "pieces": 1,
+    "category": 8,
+    "price": 139,
+    "id": 806,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/806.jpg"
+  },
+  {
+    "title": "Station Dog",
+    "weight": 270,
+    "pieces": 1,
+    "category": 8,
+    "price": 139,
+    "id": 807,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/807.jpg"
+  },
+  {
+    "title": "Fiery Dog",
+    "weight": 310,
+    "pieces": 1,
+    "category": 8,
+    "price": 159,
+    "id": 808,
+    "composition": "Brioche bun, barbecue and mushroom sauce, pork",
+    "imgUrl": "img/goods/808.jpg"
+  },
+  {
+    "title": "Smoothie",
+    "weight": 250,
+    "pieces": 1,
+    "category": 9,
+    "price": 49,
+    "id": 900,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/600.jpg"
+  },
+  {
+    "title": "Coconut Milk",
+    "weight": 270,
+    "pieces": 1,
+    "category": 9,
+    "price": 49,
+    "id": 901,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/601.jpg"
+  },
+  {
+    "title": "Orange Juice",
+    "weight": 300,
+    "pieces": 1,
+    "category": 9,
+    "price": 59,
+    "id": 902,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/602.jpg"
+  },
+  {
+    "title": "Lemonade",
+    "weight": 250,
+    "pieces": 1,
+    "category": 9,
+    "price": 49,
+    "id": 903,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/603.jpg"
+  },
+  {
+    "title": "Fruit Juice",
+    "weight": 300,
+    "pieces": 1,
+    "category": 9,
+    "price": 69,
+    "id": 904,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/604.jpg"
+  },
+  {
+    "title": "Chocolate Milk",
+    "weight": 300,
+    "pieces": 1,
+    "category": 9,
+    "price": 79,
+    "id": 905,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/605.jpg"
+  },
+  {
+    "title": "Hot Chocolate",
+    "weight": 250,
+    "pieces": 1,
+    "category": 9,
+    "price": 59,
+    "id": 906,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/607.jpg"
+  },
+  {
+    "title": "Tea Bag",
+    "weight": 300,
+    "pieces": 1,
+    "category": 9,
+    "price": 49,
+    "id": 907,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/608.jpg"
+  },
+  {
+    "title": "Green Tea",
+    "weight": 300,
+    "pieces": 1,
+    "category": 9,
+    "price": 49,
+    "id": 908,
+    "composition": "Mint, soda, green apple syrup, lemon",
+    "imgUrl": "img/goods/610.jpg"
+  }
+]

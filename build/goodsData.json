@@ -1,0 +1,164 @@
+[
+  {
+    "title": "Chicken pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 155,
+    "id": 110,
+    "imgUrl": "img/goods/10.jpg"
+  },
+  {
+    "title": "Tomato pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 145,
+    "id": 111,
+    "imgUrl": "img/goods/11.jpg"
+  },
+  {
+    "title": "Olive pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 189,
+    "id": 112,
+    "imgUrl": "img/goods/12.jpg"
+  },
+  {
+    "title": "Pepperoni pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 165,
+    "id": 113,
+    "imgUrl": "img/goods/13.jpg"
+  },
+  {
+    "title": "Four-seasons pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 135,
+    "id": 114,
+    "imgUrl": "img/goods/14.jpg"
+  },
+  {
+    "title": "Cheese pizza ",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 199,
+    "id": 115,
+    "imgUrl": "img/goods/15.jpg"
+  },
+  {
+    "title": "Romano pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 179,
+    "id": 116,
+    "imgUrl": "img/goods/16.jpg"
+  },
+  {
+    "title": "Calzone pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 155,
+    "id": 117,
+    "imgUrl": "img/goods/17.jpg"
+  },
+  {
+    "title": "Napoletana pizza",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 1,
+    "price": 169,
+    "id": 118,
+    "imgUrl": "img/goods/18.jpg"
+  },
+  {
+    "title": "Соломон сет",
+    "weight": 1500,
+    "pieces": 30,
+    "category": 2,
+    "price": 299,
+    "id": 101,
+    "imgUrl": "img/goods/01.png"
+  },
+  {
+    "title": "Сет 5 Филадельфий",
+    "weight": 1120,
+    "pieces": 40,
+    "category": 2,
+    "price": 315,
+    "id": 102,
+    "imgUrl": "img/goods/02.png"
+  },
+  {
+    "title": "Филадельфия и лосось сет",
+    "weight": 1260,
+    "pieces": 36,
+    "category": 2,
+    "price": 299,
+    "id": 103,
+    "imgUrl": "img/goods/03.png"
+  },
+  {
+    "title": "Сет 6 Филадельфий",
+    "weight": 1320,
+    "pieces": 46,
+    "category": 2,
+    "price": 335,
+    "id": 104,
+    "imgUrl": "img/goods/04.png"
+  },
+  {
+    "title": "Топовый cет",
+    "weight": 1020,
+    "pieces": 60,
+    "category": 2,
+    "price": 275,
+    "id": 105,
+    "imgUrl": "img/goods/05.png"
+  },
+  {
+    "title": "Камикадзе сет",
+    "weight": 1200,
+    "pieces": 52,
+    "category": 2,
+    "price": 365,
+    "id": 106,
+    "imgUrl": "img/goods/06.png"
+  },
+  {
+    "title": "Сет 4 Филадельфии",
+    "weight": 1120,
+    "pieces": 36,
+    "category": 2,
+    "price": 349,
+    "id": 107,
+    "imgUrl": "img/goods/07.png"
+  },
+  {
+    "title": "Филадельфия LOVE сет",
+    "weight": 1000,
+    "pieces": 40,
+    "category": 2,
+    "price": 315,
+    "id": 108,
+    "imgUrl": "img/goods/08.png"
+  },
+  {
+    "title": "Якудза сет",
+    "weight": 1270,
+    "pieces": 46,
+    "category": 2,
+    "price": 299,
+    "id": 109,
+    "imgUrl": "img/goods/09.png"
+  }
+]

@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/static/css/main.7ed6cc8e.css",
+    "main.js": "/static/js/main.0f794018.js",
+    "static/media/logo.svg": "/static/media/logo.14cd78aeefea89d4a8708cf688785405.svg",
+    "static/media/DINPro-Medium.woff": "/static/media/DINPro-Medium.a1bc5f57b21ee4caefeb.woff",
+    "static/media/DINPro.woff": "/static/media/DINPro.2312373148a7f0a45fb9.woff",
+    "static/media/DINPro-Bold.woff": "/static/media/DINPro-Bold.8e69452909aee6e6443a.woff",
+    "static/media/DINPro-Light.woff": "/static/media/DINPro-Light.292042ef25b51a750ce8.woff",
+    "static/media/DINPro-Medium.woff2": "/static/media/DINPro-Medium.168b57cc737bfb986884.woff2",
+    "static/media/DINPro.woff2": "/static/media/DINPro.3af2f40793e3aa3f2ce2.woff2",
+    "static/media/DINPro-Bold.woff2": "/static/media/DINPro-Bold.64979e4bde735e383780.woff2",
+    "static/media/DINPro-Light.woff2": "/static/media/DINPro-Light.101ffd6f847dbb086aca.woff2",
+    "static/media/Nexa-Light.woff": "/static/media/Nexa-Light.f750efef4ae55fe2aee7.woff",
+    "static/media/Nexa-Light.woff2": "/static/media/Nexa-Light.5164d13dd93fa21dd026.woff2",
+    "index.html": "/index.html",
+    "main.7ed6cc8e.css.map": "/static/css/main.7ed6cc8e.css.map",
+    "main.0f794018.js.map": "/static/js/main.0f794018.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.7ed6cc8e.css",
+    "static/js/main.0f794018.js"
+  ]
+}

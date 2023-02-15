@@ -1,0 +1,72 @@
+[
+  {
+    "title": "Pizza",
+    "categoryId": 1,
+    "imgUrl": "img/icons/pizza.svg",
+    "imgBigUrl": "img/categories/pizza.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Sets",
+    "categoryId": 2,
+    "imgUrl": "img/icons/sets.svg",
+    "imgBigUrl": "img/categories/sets.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "WOK",
+    "categoryId": 3,
+    "imgUrl": "img/icons/wok.svg",
+    "imgBigUrl": "img/categories/wok.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Rolls",
+    "categoryId": 4,
+    "imgUrl": "img/icons/rolls.svg",
+    "imgBigUrl": "img/categories/rolls.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Sushi",
+    "categoryId": 5,
+    "imgUrl": "img/icons/sushi.svg",
+    "imgBigUrl": "img/categories/sushi.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Salads",
+    "categoryId": 6,
+    "imgUrl": "img/icons/salads.svg",
+    "imgBigUrl": "img/categories/salads.jpg",
+    "isSoon": true
+  },
+  {
+    "title": "Soups",
+    "categoryId": 7,
+    "imgUrl": "img/icons/sups.svg",
+    "imgBigUrl": "img/categories/soups.jpg",
+    "isSoon": true
+  },
+  {
+    "title": "Corn-Dogs",
+    "categoryId": 8,
+    "imgUrl": "img/icons/corndogs.svg",
+    "imgBigUrl": "img/categories/corndogs.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Drinks",
+    "categoryId": 9,
+    "imgUrl": "img/icons/drinks.svg",
+    "imgBigUrl": "img/categories/drinks.jpg",
+    "isSoon": false
+  },
+  {
+    "title": "Actions",
+    "categoryId": 10,
+    "imgUrl": "img/icons/actions.svg",
+    "imgBigUrl": "img/categories/actions.jpg",
+    "isSoon": true
+  }
+]

@@ -1,0 +1,23 @@
+.rootSpan {
+  position: relative;
+  display: flex;
+  width: 100%;
+  gap: 5px;
+}
+
+.countSpan {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  padding: 2px;
+  transform: translate(150%, -50%);
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+  padding: 0px 5px;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  border: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+}

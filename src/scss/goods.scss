@@ -1,0 +1,342 @@
+// ==================GOOD-PAGE=====================
+
+.goods-page {
+  // .goods-page__top
+
+  &__top {
+    padding-top: 22px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: 865px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      row-gap: 22px;
+      margin-bottom: 15px;
+    }
+  }
+
+  // .goods-page__top-title
+
+  &__top-title {
+    display: flex;
+    align-items: center;
+    gap: 21px;
+  }
+
+  // .goods-page__title-svg
+
+  &__title-svg {
+    width: 40px;
+    height: 43px;
+  }
+
+  // .goods-page__text
+
+  &__text {
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.25;
+    color: #000000;
+  }
+
+  // .goods-page__sort-popup
+
+  &__sort-popup {
+  }
+
+  // .goods-page__items
+
+  &__items {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 52px;
+
+    gap: 40px;
+    @media (max-width: 1880px) {
+      gap: 10px;
+    }
+    @media (max-width: 1150px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (max-width: 767.98px) {
+      grid-template-columns: repeat(1, 1fr);
+      width: 100%;
+    }
+  }
+}
+
+// =======================SORT-POPUP===============================
+.popup-sort {
+  position: relative;
+  transition: all 0.3s ease 0s;
+  @media (max-width: 865px) {
+    height: 50px;
+    width: 100%;
+  }
+
+  &__box {
+    padding: 4px 9px 10px 14px;
+    width: 205px;
+    border-radius: 15px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    transform: translate(1%, 0%);
+    z-index: 5;
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
+    transition: all 0.3s ease 0s;
+    @media (max-width: 865px) {
+      top: 0%;
+      right: 0%;
+      width: 100%;
+    }
+
+    &_closed {
+      box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.01);
+      transform: translate(0%, 0%);
+    }
+    // width: 100%;
+  }
+  // .popup-sort__top
+  &__top {
+    padding-bottom: 10px;
+  }
+  // .popup-sort__title
+
+  &__title {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 1.214;
+    color: #000;
+    @media (max-width: 865px) {
+      font-size: 18px;
+    }
+  }
+
+  // .popup-sort__type
+
+  &__type {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.222;
+    color: #f46d40;
+    cursor: pointer;
+    @media (max-width: 865px) {
+      font-size: 24px;
+    }
+  }
+
+  // .popup-sort__list
+
+  &__list {
+    padding-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    border-top: 0.5px solid #a4acad;
+    transition: all 0.3s ease 0s;
+  }
+
+  // .popup-sort__item
+
+  &__item {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.222;
+    color: #111111;
+    transition: all 0.3s ease 0s;
+    @media (max-width: 865px) {
+      font-size: 22px;
+    }
+    &:hover {
+      color: #f46d40;
+    }
+  }
+}
+
+// =====================GOOD-CARD========================
+
+.good-card {
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  border-radius: 5px;
+  padding-left: 17px;
+  padding-right: 17px;
+  padding-top: 17px;
+  justify-content: space-between;
+  transition: all 0.2s ease 0s;
+  &:hover {
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.5);
+    transform: translate(1px, -1px);
+  }
+  &_none {
+    @media (max-width: 1150px) {
+      display: none;
+    }
+  }
+  @media (max-width: 767.98px) {
+    padding-top: 18px;
+    padding-bottom: 18px;
+    padding-right: 10px;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    border-radius: 10px;
+  }
+  @media (max-width: 520px) {
+    height: 140px;
+  }
+  @media (max-width: 410px) {
+    justify-content: unset;
+    gap: 20px;
+    height: 140px;
+    width: 100%;
+  }
+  // .good-card__top
+
+  &__top {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+    margin-bottom: 20px;
+    height: 100%;
+    @media (max-width: 1600px) {
+      gap: 20px;
+    }
+    @media (max-width: 1301px) {
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+    @media (max-width: 767.98px) {
+      justify-content: center;
+    }
+  }
+
+  // .good-card__image-ibg
+
+  &__image-ibg {
+    padding-bottom: 80.237%;
+    border-radius: 6px;
+    overflow: hidden;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    @media (max-width: 767.98px) {
+      padding-left: 31.303%;
+      padding-bottom: 25.303%;
+    }
+    @media (max-width: 520px) {
+      padding-left: 35.303%;
+      height: 84%;
+    }
+  }
+
+  &__text-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    @media (max-width: 767.98px) {
+      justify-content: flex-start;
+      height: 30%;
+    }
+  }
+
+  // .good-card__title
+
+  &__title {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #000000;
+    margin-bottom: 15px;
+    @media (max-width: 1600px) {
+      font-size: 20px;
+    }
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  // .good-card__info
+
+  &__info {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.222;
+    color: #a4acad;
+    @media (max-width: 767.98px) {
+      font-size: 14px;
+    }
+  }
+
+  // .good-card__item-bottom
+
+  &__item-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    border-top: 0.5px solid #a4acad;
+    @media (max-width: 1840px) {
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    @media (max-width: 767.98px) {
+      flex-direction: row;
+      gap: 10px;
+      border-top: unset;
+    }
+  }
+
+  // .good-card__price
+
+  &__price {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #000000;
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+    }
+    @media (max-width: 359.98px) {
+      font-size: 14px;
+    }
+  }
+
+  // .good-card__button
+
+  &__button {
+    font-family: "DINPro";
+    padding: 5px 42px;
+    background: #f46d40;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #f2f2f2;
+    transition: transform 0.2s ease 0s;
+    @media (max-width: 767.98px) {
+      font-size: 18px;
+      padding: 2px 25px 5px;
+    }
+    &:active {
+      transform: translate(1px, 1px);
+    }
+  }
+}
+.button-goods {
+}
+
+.ddd {
+}

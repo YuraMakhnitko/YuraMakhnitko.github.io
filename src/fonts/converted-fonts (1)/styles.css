@@ -1,0 +1,5 @@
+@font-face {
+  font-family: 'Nexa-Light';
+  src: url(./Nexa-Light.woff) format('woff'),
+       url(./Nexa-Light.woff2) format('woff2');
+}

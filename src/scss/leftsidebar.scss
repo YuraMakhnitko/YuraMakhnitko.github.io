@@ -1,0 +1,132 @@
+.sidebar-left {
+  padding-top: 26px;
+  padding-bottom: 26px;
+  padding-right: 31px;
+  padding-left: 100px;
+  background-color: #ffffff;
+  @media (max-width: 1800px) {
+    padding-left: 80px;
+  }
+  @media (max-width: 1600px) {
+    padding-left: 50px;
+  }
+  @media (max-width: 1400px) {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media (max-width: 1070px) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  @media (max-width: 991.98px) {
+    display: none;
+  }
+
+  // .sidebar-left__logo-block
+
+  &__logo-block {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    &:not(:last-child) {
+      margin-bottom: 31px;
+    }
+  }
+
+  // .sidebar-left__title
+
+  &__title {
+    font-family: "Nexa";
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #000000;
+  }
+
+  // .sidebar-left__bottom-line
+
+  &__bottom-line {
+    border: 0.5px solid #a4acad;
+    margin-top: 30px;
+    margin-right: 9px;
+  }
+
+  // .sidebar-left__menu
+
+  &__menu {
+  }
+
+  // .sidebar-left__list
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    padding-left: 29px;
+    width: 200px;
+  }
+
+  // .sidebar-left__list-item
+
+  &__list-item {
+    position: relative;
+  }
+
+  // .sidebar-left__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 1.25;
+    align-items: center;
+    color: #000000;
+    transition: color 0.3s ease 0s;
+    &:hover {
+      color: #ff9846;
+    }
+    &_disabled {
+      cursor: unset;
+      opacity: 0.5;
+      &:hover {
+        color: #000000;
+      }
+    }
+  }
+}
+.shop__left-sidebar__link {
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+}
+
+.info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(0%, -50%);
+  background: #eb5757;
+  border-radius: 10px;
+  padding: 1px 8px;
+  display: inline-flex;
+  &_goods {
+    top: 20px;
+    right: 10px;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 1.273;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    color: #ffffff;
+  }
+}
