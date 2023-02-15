@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/YuraMakhnitko/YuraMakhnitko.github.io/static/css/main.ddac17d8.css",
-    "main.js": "/YuraMakhnitko/YuraMakhnitko.github.io/static/js/main.58e5af7f.js",
+    "main.js": "/YuraMakhnitko/YuraMakhnitko.github.io/static/js/main.6031a8fe.js",
     "static/media/logo.svg": "/YuraMakhnitko/YuraMakhnitko.github.io/static/media/logo.14cd78aeefea89d4a8708cf688785405.svg",
     "static/media/DINPro-Medium.woff": "/YuraMakhnitko/YuraMakhnitko.github.io/static/media/DINPro-Medium.a1bc5f57b21ee4caefeb.woff",
     "static/media/DINPro.woff": "/YuraMakhnitko/YuraMakhnitko.github.io/static/media/DINPro.2312373148a7f0a45fb9.woff",
@@ -15,10 +15,10 @@
     "static/media/Nexa-Light.woff2": "/YuraMakhnitko/YuraMakhnitko.github.io/static/media/Nexa-Light.5164d13dd93fa21dd026.woff2",
     "index.html": "/YuraMakhnitko/YuraMakhnitko.github.io/index.html",
     "main.ddac17d8.css.map": "/YuraMakhnitko/YuraMakhnitko.github.io/static/css/main.ddac17d8.css.map",
-    "main.58e5af7f.js.map": "/YuraMakhnitko/YuraMakhnitko.github.io/static/js/main.58e5af7f.js.map"
+    "main.6031a8fe.js.map": "/YuraMakhnitko/YuraMakhnitko.github.io/static/js/main.6031a8fe.js.map"
   },
   "entrypoints": [
     "static/css/main.ddac17d8.css",
-    "static/js/main.58e5af7f.js"
+    "static/js/main.6031a8fe.js"
   ]
 }
