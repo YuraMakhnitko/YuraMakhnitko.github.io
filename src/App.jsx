@@ -1,25 +1,25 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, HashRouter } from 'react-router-dom';
 
-import { useParams } from "react-router-dom";
+import { useParams } from 'react-router-dom';
 
-import { useScreenWidth } from "./hooks/useScreenWidth";
+import { useScreenWidth } from './hooks/useScreenWidth';
 
-import "./App.css";
-import Footer from "./componetns/Footer";
-import Header from "./componetns/Header";
-import PreFooter from "./componetns/PreFooter";
-import LeftSideBar from "./componetns/LeftSideBar";
-import GoodsCard from "./pages/GoodsCard";
+import './App.css';
+import Footer from './componetns/Footer';
+import Header from './componetns/Header';
+import PreFooter from './componetns/PreFooter';
+import LeftSideBar from './componetns/LeftSideBar';
+import GoodsCard from './pages/GoodsCard';
 
-import Home from "./pages/Home";
-import Goods from "./pages/Goods";
-import Order from "./pages/Order";
-import NotFound from "./pages/NotFound";
-import RightSideBar from "./componetns/RightSideBar";
-import Cart from "./componetns/Cart";
+import Home from './pages/Home';
+import Goods from './pages/Goods';
+import Order from './pages/Order';
+import NotFound from './pages/NotFound';
+import RightSideBar from './componetns/RightSideBar';
+import Cart from './componetns/Cart';
 
-import "./scss/style.scss";
-import FooterMobile from "./componetns/FooterMobile";
+import './scss/style.scss';
+import FooterMobile from './componetns/FooterMobile';
 
 function App() {
   const windowSize = useScreenWidth();
