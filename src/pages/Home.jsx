@@ -1,30 +1,16 @@
-import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setCategory } from "../redux/filter/slice";
+import { Link } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { setCategory } from '../redux/filter/slice';
 
-import TopSlider from "../componetns/TopSlider";
-import PreFooter from "../componetns/PreFooter";
-import catgoriesList from "../redux/settings/categories.json";
+import TopSlider from '../componetns/TopSlider';
+import PreFooter from '../componetns/PreFooter';
+import catgoriesList from '../redux/settings/categories.json';
 
-import "react-awesome-slider/dist/styles.css";
-import FooterMobile from "../componetns/FooterMobile";
+import 'react-awesome-slider/dist/styles.css';
+import FooterMobile from '../componetns/FooterMobile';
+import { slideItems } from '../redux/settings/actionsItems';
 
-import { useScreenWidth } from "../hooks/useScreenWidth";
-
-const slideItems = [
-  { path: "img/categories/rolls.jpg", discount: "25%", title: "rolls" },
-  { path: "img/categories/pizza.jpg", discount: "30%", title: "pizzas" },
-  { path: "img/categories/sushi.jpg", discount: "20%", title: "sushi" },
-  { path: "img/categories/sets.jpg", discount: "35%", title: "sets" },
-];
-// const slideItemsTwo = [
-//   { path: "img/home/slidergoods/01.jpg" },
-//   { path: "img/home/slidergoods/02.jpg" },
-//   { path: "img/home/slidergoods/03.jpg" },
-//   { path: "img/home/slidergoods/01.jpg" },
-//   { path: "img/home/slidergoods/02.jpg" },
-//   { path: "img/home/slidergoods/03.jpg" },
-// ];
+import { useScreenWidth } from '../hooks/useScreenWidth';
 
 let settings = {
   dots: true,
@@ -37,21 +23,11 @@ let settings = {
   arrows: false,
 };
 
-// let settingsTwo = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 3,
-//   slidesToScroll: 1,
-//   autoplay: true,
-//   autoplaySpeed: 2000,
-// };
-
 const Home = () => {
   const categories = JSON.parse(JSON.stringify(catgoriesList));
   const dispatch = useDispatch();
-  const disabledStyle = "goods__link_disabled";
-  const disabledStyleItem = "goods__item_disabled";
+  const disabledStyle = 'goods__link_disabled';
+  const disabledStyleItem = 'goods__item_disabled';
 
   const windowSize = useScreenWidth();
   return (
@@ -63,15 +39,15 @@ const Home = () => {
         {categories.map((category) => (
           <div
             className={`goods__item ${
-              category.isSoon ? disabledStyleItem : ""
+              category.isSoon ? disabledStyleItem : ''
             }`}
             key={category.categoryId}
           >
             <div className="goods__image-ibg">
               <Link
-                to={`${category.isSoon ? "" : "/goods"}`}
+                to={`${category.isSoon ? '' : '/goods'}`}
                 className={`goods__link ${
-                  category.isSoon ? disabledStyle : ""
+                  category.isSoon ? disabledStyle : ''
                 }`}
                 onClick={() => dispatch(setCategory({ ...category }))}
               >
@@ -88,7 +64,7 @@ const Home = () => {
           </div>
         ))}
       </section>
-      <section className="shop-center__goods-slider slider-goods">
+      {/* <section className="shop-center__goods-slider slider-goods">
         <div className="slider-goods__top">
           <button className="slider-goods__link-top">New</button>
           <button className="slider-goods__link-top">Popular</button>
@@ -160,7 +136,7 @@ const Home = () => {
             <img src="img/home/slidergoods/arrow.svg" alt="arrow" />
           </button>
         </div>
-      </section>
+      </section> */}
       {windowSize.width < 991.98 && <FooterMobile />}
       <PreFooter />
     </main>

@@ -3,70 +3,70 @@
     "title": "Pizza",
     "categoryId": 1,
     "imgUrl": "img/icons/pizza.svg",
-    "imgBigUrl": "img/categories/pizza.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/465763436/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BC%D0%B0%D1%87%D0%BD%D0%B0-%D1%81%D0%B8%D1%80%D0%BD%D0%B0-%D0%BF%D1%96%D1%86%D0%B0-%D0%B7-%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BD%D0%B8%D0%BC-%D1%81%D0%BE%D1%83%D1%81%D0%BE%D0%BC-%D1%96-%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC-%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D0%B8%D0%BC-%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%BC.jpg?s=612x612&w=0&k=20&c=OxNcd_WNxAD8uedONTIE-ArIkzgekoK-PlZbOhNRgSI=",
     "isSoon": false
   },
   {
     "title": "Sets",
     "categoryId": 2,
     "imgUrl": "img/icons/sets.svg",
-    "imgBigUrl": "img/categories/sets.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/495914931/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%8F%D0%BF%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-%D0%BD%D0%B0%D0%B1%D1%96%D1%80-%D1%81%D1%83%D1%88%D1%96-%D0%BC%D0%BE%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%96%D0%B2.jpg?s=612x612&w=0&k=20&c=5AjqhRa6FmtUt7P6udxV4U5lovQNHFmFeWemdjJtDEM=",
     "isSoon": false
   },
   {
     "title": "WOK",
     "categoryId": 3,
     "imgUrl": "img/icons/wok.svg",
-    "imgBigUrl": "img/categories/wok.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/1347038363/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D1%96%D1%88%D0%B0%D1%82%D0%B8-%D1%81%D0%BC%D0%B0%D0%B6%D0%B8%D1%82%D0%B8-%D0%B7-%D0%BA%D1%83%D1%80%D0%BA%D0%BE%D1%8E-%D0%B1%D0%B0%D0%BA%D0%BB%D0%B0%D0%B6%D0%B0%D0%BD%D0%B0%D0%BC%D0%B8-%D0%BA%D0%B0%D0%B1%D0%B0%D1%87%D0%BA%D0%B0%D0%BC%D0%B8-%D1%96-%D1%81%D0%BE%D0%BB%D0%BE%D0%B4%D0%BA%D0%B8%D0%BC-%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC-%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D1%8E-%D1%97%D0%B6%D0%B5%D1%8E-%D0%B2%D0%B8%D0%B4-%D0%B7%D0%B2%D0%B5%D1%80%D1%85%D1%83.jpg?s=612x612&w=0&k=20&c=i8Qe9qReAtFVE6SUEXtFwUMR48Kya1eFIYPefCHJZ_c=",
     "isSoon": false
   },
   {
     "title": "Rolls",
     "categoryId": 4,
     "imgUrl": "img/icons/rolls.svg",
-    "imgBigUrl": "img/categories/rolls.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/1302000400/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BB%D0%BE%D1%81%D0%BE%D1%81%D0%B5%D0%B2%D1%96-%D1%81%D1%83%D1%88%D1%96-%D1%80%D0%BE%D0%BB%D0%B8.jpg?s=612x612&w=0&k=20&c=5NqQhY-nkaJ3YDeqs1Yek8otUZpBw0-x81x-SilScvM=",
     "isSoon": false
   },
   {
     "title": "Sushi",
     "categoryId": 5,
     "imgUrl": "img/icons/sushi.svg",
-    "imgBigUrl": "img/categories/sushi.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/504985598/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%8F%D0%BF%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D1%96-%D1%81%D1%83%D1%88%D1%96-%D0%B7-%D0%BC%D0%BE%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%96%D0%B2.jpg?s=612x612&w=0&k=20&c=Gvlq3NN7OrnexJfNeoCia_SA62o3RNoenB6MLGJiD9U=",
     "isSoon": false
   },
   {
     "title": "Salads",
     "categoryId": 6,
     "imgUrl": "img/icons/salads.svg",
-    "imgBigUrl": "img/categories/salads.jpg",
+    "imgBigUrl": "https://images.pexels.com/photos/1059905/pexels-photo-1059905.jpeg?auto=compress&cs=tinysrgb&w=600",
     "isSoon": true
   },
   {
     "title": "Soups",
     "categoryId": 7,
     "imgUrl": "img/icons/sups.svg",
-    "imgBigUrl": "img/categories/soups.jpg",
+    "imgBigUrl": "https://images.pexels.com/photos/209540/pexels-photo-209540.jpeg?auto=compress&cs=tinysrgb&w=600",
     "isSoon": true
   },
   {
     "title": "Corn-Dogs",
     "categoryId": 8,
     "imgUrl": "img/icons/corndogs.svg",
-    "imgBigUrl": "img/categories/corndogs.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/1404888245/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BC%D0%B0%D1%87%D0%BD%D1%96-%D0%BA%D1%83%D0%BA%D1%83%D1%80%D1%83%D0%B4%D0%B7%D1%8F%D0%BD%D1%96-%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B8-%D1%83-%D1%84%D1%80%D0%B8%D1%82%D1%8E%D1%80%D1%96-%D0%B7-%D1%81%D0%B0%D0%BB%D0%B0%D1%82%D0%BE%D0%BC-%D1%96-%D1%81%D0%BE%D1%83%D1%81%D0%B0%D0%BC%D0%B8-%D0%BD%D0%B0-%D1%81%D1%96%D1%80%D0%BE%D0%BC%D1%83-%D1%81%D1%82%D0%BE%D0%BB%D1%96-%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D0%B8%D0%BC-%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%BC.jpg?s=612x612&w=0&k=20&c=XBbhc2o02TbWnVMLjdmU5i1NIpIkJ-WA511pqVjb1dQ=",
     "isSoon": false
   },
   {
     "title": "Drinks",
     "categoryId": 9,
     "imgUrl": "img/icons/drinks.svg",
-    "imgBigUrl": "img/categories/drinks.jpg",
+    "imgBigUrl": "https://media.istockphoto.com/id/876497484/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BA%D0%BB%D1%8F%D0%BD%D0%BA%D0%B8-%D0%B7%D1%96-%D1%81%D0%B2%D1%96%D0%B6%D0%B8%D0%BC%D0%B8-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BE%D0%B2%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%BC%D0%B8-%D1%82%D0%B0-%D1%84%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%B8%D0%BC%D0%B8-%D1%81%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=IHhpjWgLNiMdxgv5wcGyfO9HEdkNnhrS6nE9zdKDCdY=",
     "isSoon": false
   },
   {
     "title": "Actions",
     "categoryId": 10,
     "imgUrl": "img/icons/actions.svg",
-    "imgBigUrl": "img/categories/actions.jpg",
+    "imgBigUrl": "https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg?auto=compress&cs=tinysrgb&w=600",
     "isSoon": true
   }
 ]
