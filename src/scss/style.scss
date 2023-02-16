@@ -66,7 +66,6 @@ body {
   flex-direction: column;
   overflow: hidden;
   background: #f2f2f2;
-  // background: rgb(55, 54, 54);
   width: 100%;
   color: #000;
   font-family: "DINPro";
@@ -133,16 +132,12 @@ body {
 // Для подключения/отключения конкретных стилей смотри base.scss
 @import "base";
 
-// Подключение стилей общих элементов проекта
-@import "common";
-
 // Подключение стилей отдельных блоков
 @import "header";
 @import "footer";
 
 // Подключение стилей отдельных страниц
 @import "index";
-@import "home";
 @import "leftsidebar"; // styles for left sidebar
 @import "rightsidebar"; // styles for right sidebar
 @import "goods"; // styles for right sidebar
@@ -150,3 +145,4 @@ body {
 @import "cart"; // styles for right sidebar
 @import "order"; // styles for right sidebar
 @import "slick"; //slider styles
+@import "actions"; //actions styles

@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { setGoodCard } from "../../redux/goodCard/slice";
 import { setCartItem, setInc } from "../../redux/cart/slice";
 
-import style from "./goodsItem.module.scss";
-
 const GoodsItem = ({ good }) => {
   const { title, weight, pieces, category, price, id, imgUrl } = good;
-  const cartItems = useSelector((state) => state.cart.cartItems);
 
   const dispatch = useDispatch();
-
-  const findCount = cartItems.find((cartItem) => cartItem.id === id);
 
   let goodInfoForSmallCard = "pieses";
   let goodMeasuring = "gramm";
@@ -57,14 +52,7 @@ const GoodsItem = ({ good }) => {
             onClick={onHandleAdd}
             className="good-card__button button-goods"
           >
-            {findCount && findCount.count > 0 ? (
-              <div className={style.rootSpan}>
-                <span>Want!</span>
-                <span className={style.countSpan}>{findCount?.count}</span>
-              </div>
-            ) : (
-              <span>Want!</span>
-            )}
+            <span>Want!</span>
           </button>
         </div>
       </div>

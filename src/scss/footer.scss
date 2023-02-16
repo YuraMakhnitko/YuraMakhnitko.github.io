@@ -12,20 +12,9 @@
     padding-left: 10px;
   }
 
-  // .footer__container
-
-  &__container {
-  }
-
-  // .footer__content
-
-  &__content {
-  }
-
   // .footer__items
 
   &__items {
-    // padding-top: 31px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -51,7 +40,6 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1;
-    color: #000000;
   }
 
   // .footer__contacts
@@ -64,7 +52,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1;
-    color: #000000;
+    color: #a4acad;
     @media (max-width: 500px) {
       padding-left: 0px;
     }
@@ -78,11 +66,7 @@
     margin-top: 20px;
   }
 
-  // .footer__link-messenger
-
-  &__link-messenger {
-  }
-
+  // .footer__messenger-icon
   &__messenger-icon {
     opacity: 0.6;
     transition: all 0.3s ease 0s;
@@ -90,18 +74,6 @@
     &:hover {
       opacity: 0.8;
     }
-  }
-
-  // .footer__constacts
-
-  // .footer__phone
-
-  &__phone {
-  }
-
-  // .footer__contacts-text
-
-  &__contacts-text {
   }
 }
 
@@ -156,15 +128,10 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    font-family: "DINPro";
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.25;
     color: #111111;
-  }
-
-  &__button {
   }
 
   &__bunner {

@@ -1,10 +1,7 @@
-import { useEffect } from "react";
+import { useSelector } from "react-redux";
+
 import GoodsItem from "../componetns/goodsItem";
 import { useScreenWidth } from "../hooks/useScreenWidth";
-
-import { useSelector, useDispatch } from "react-redux";
-
-import { setGoods } from "../redux/filter/slice";
 
 import Sort from "../componetns/Sort";
 import FooterMobile from "../componetns/FooterMobile";
@@ -12,25 +9,10 @@ import FooterMobile from "../componetns/FooterMobile";
 import PreFooter from "../componetns/PreFooter";
 
 const Goods = () => {
-  const dispatch = useDispatch();
-  // const searchValue = useSelector((state) => state.filter.searchValue);
-  const { field, desk } = useSelector((state) => state.filter.sort);
   const category = useSelector((state) => state.filter.category);
-  const { goodsToSet, goodsSetted } = useSelector((state) => state.filter);
+  const { goodsSetted } = useSelector((state) => state.filter);
 
   const windowSize = useScreenWidth();
-
-  // useEffect(() => {
-  // field !== null
-  //   ? dispatch(
-  //       setGoods(
-  //         filteredGoods.sort((a, b) =>
-  //           a[field] > b[field] ? 1 * [desk] : -1 * [desk]
-  //         )
-  //       )
-  //     )
-  //   : dispatch(setGoods(goodsDefault));
-  // }, [field, desk]);
 
   return (
     <main className="shop-main">

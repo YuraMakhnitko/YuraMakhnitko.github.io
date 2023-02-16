@@ -14,9 +14,6 @@ const Sort = () => {
   const dispatch = useDispatch();
   const openPopUp = useSelector((state) => state.filter.openPopUp);
   const { titleFilter } = useSelector((state) => state.filter.sort);
-  const sort = useSelector((state) => state.filter.sort);
-
-  // console.log(sort);
 
   const ref = useRef();
 

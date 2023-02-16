@@ -17,13 +17,6 @@
       padding-left: 0px;
       padding-right: 0px;
     }
-
-    // width: 100%;
-  }
-
-  // .shop__left-sidebar
-
-  &__left-sidebar {
   }
 }
 
@@ -79,37 +72,12 @@
     max-width: unset;
     width: 100%;
   }
-
-  // @media (max-width: 992px) {
-  //   max-width: 410px;
-  // }
-  // @media (max-width: 950px) {
-  //   max-width: 368px;
-  // }
-  // @media (max-width: 862px) {
-  //   max-width: 300px;
-  // }
-  // @media (max-width: 798px) {
-  //   max-width: 270px;
-  // }
-
-  // width: 100%;
-  // max-width: 100%;
-  // @media (max-width: 1150px) {
-  // width: 500px;
-  // width: 100%;
-  // }
-  // @media (max-width: 767.98px) {
-  //   max-width: unset;
-  //   width: 100%;
-  // }
 }
 
 // ===============MAIN-BANNER=============================
 
 .shop-main {
   position: relative;
-  //   padding-top: 30px;
   padding-right: 110px;
   padding-left: 110px;
   @media (max-width: 1800px) {
@@ -132,8 +100,6 @@
 }
 
 .main-banner {
-  // width: 500px;
-
   padding-top: 30px;
   @media (max-width: 767.98px) {
     display: none;
@@ -162,10 +128,6 @@
     overflow: hidden;
     background: #a4acad;
     cursor: pointer;
-
-    // &:focus {
-    //   background: #ff9846;
-    // }
   }
   &__link {
     background: #a4acad;
@@ -180,12 +142,6 @@
 
 // ====================GOODS================================================
 
-.shop-senter {
-  // .shop-senter__goods
-
-  &__goods {
-  }
-}
 .goods {
   position: relative;
   margin-top: 20px;
@@ -215,9 +171,10 @@
     position: relative;
     transform: translate(0px, 0px);
     transition: all 0.2s ease 0s;
+    background-color: rgba(0, 0, 0, 0.15);
+
     &:hover {
-      transform: translate(2px, 1px);
-      box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.5);
+      box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.1);
       border-radius: 6px;
     }
     &_disabled {
@@ -320,12 +277,7 @@
 }
 
 // ================SLIDER-GOODS================================================
-.shop-center {
-  // .shop-center__goods-slider
 
-  &__goods-slider {
-  }
-}
 .slider-goods {
   margin-bottom: 50px;
   position: relative;
@@ -361,7 +313,6 @@
     position: relative;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    // background-color: #a4acad;
 
     gap: 40px;
     @media (max-width: 1880px) {
@@ -405,20 +356,14 @@
 
 // =============PRE-FOOTER======================================
 
-.shop-center {
-  // .shop-center__pre-footer
-
-  &__pre-footer {
-  }
-}
 .pre-footer {
   z-index: 0;
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding-bottom: 60px;
-
   border-bottom: 0.5px solid #a4acad;
+
   // .pre-footer__title
   &__title {
     font-weight: 700;
@@ -466,9 +411,4 @@
       background-color: #a4acad;
     }
   }
-}
-
-.slid {
-  // width: 100%;
-  // max-width: 970px;
 }

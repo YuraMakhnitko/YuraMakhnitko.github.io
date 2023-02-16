@@ -1,10 +1,10 @@
 import { useSelector, useDispatch } from "react-redux";
 
+import { useLocation } from "react-router-dom";
+
 import { BsFillXCircleFill, BsFillTrashFill } from "react-icons/bs";
 
 import { Link } from "react-router-dom";
-
-import { useScreenWidth } from "../hooks/useScreenWidth";
 
 import Counter from "./Counter";
 
@@ -16,19 +16,10 @@ const Cart = () => {
   const totalSumm = useSelector((state) => state.cart.totalSumm);
   const totalCount = useSelector((state) => state.cart.totalCount);
 
-  const windowSize = useScreenWidth();
+  const orderLocation = useLocation();
+  console.log(orderLocation.pathname);
+
   const dispatch = useDispatch();
-  // const navigate = useNavigate();
-
-  // useEffect(() => {
-  //   if (windowSize.width > 991.98) {
-  //     navigate("/");
-  //   }
-  // }, [windowSize]);
-
-  // const order = useLocation();
-  // console.log(totalSumm);
-  // console.log(cartItems);
 
   return totalSumm ? (
     <div className="cart">
@@ -75,9 +66,12 @@ const Cart = () => {
           <p className=" cart__total-sum_cart-in-order">Sum</p>
           <p className="cart__total-sum_cart-in-order">{totalSumm} ₴</p>
         </div>
-        <Link to="/order" className="order-button">
-          <p>Place Order</p>
-        </Link>
+        {orderLocation.pathname !== "/order" && (
+          <Link to="/order" className="order-button">
+            <p>Place Order</p>
+          </Link>
+        )}
+
         <div className="cart__clear-cart">
           <p>Clear Cart</p>
 

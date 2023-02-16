@@ -10,8 +10,6 @@ const initialState = {
   goodsDefault,
 };
 
-// good.category === action.payload.category
-
 export const goodsSlice = createSlice({
   name: "goods",
   initialState,

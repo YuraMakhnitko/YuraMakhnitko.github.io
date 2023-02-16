@@ -1,13 +1,16 @@
-import React from 'react';
-import { useLocation } from 'react-router';
-import { Link } from 'react-router-dom';
+import React from "react";
+import { useLocation } from "react-router";
+import { Link } from "react-router-dom";
+import { useScreenWidth } from "../hooks/useScreenWidth";
 
-import Search from './Search';
+import Search from "./Search";
 
-const orderHeaderStyle = 'header__contacts_order';
+const orderHeaderStyle = "header__contacts_order";
 
 const Header = ({ searchChageHandle, searchValue }) => {
   const search = useLocation();
+
+  const widowSize = useScreenWidth();
 
   return (
     <header className="header">
@@ -18,9 +21,32 @@ const Header = ({ searchChageHandle, searchValue }) => {
           alt="logo"
         />
       </Link>
+      {search.pathname === "/order" && widowSize.width > 991.98 && (
+        <div className="order__go-back-button">
+          <Link to="/">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <circle cx="10" cy="10" r="10" fill="#FF9846" />
+              <path
+                d="M11.75 5.75L7.25 10.25L11.75 14.75"
+                stroke="#F2F2F2"
+                strokeLinecap="round"
+              />
+            </svg>
+          </Link>
+          <Link to="/">
+            <p className="page-card__button-text">Continue selection</p>
+          </Link>
+        </div>
+      )}
       <div
         className={`header__contacts ${
-          search.pathname === '/order' ? orderHeaderStyle : ''
+          search.pathname === "/order" ? orderHeaderStyle : ""
         }`}
       >
         <div className="header__contacts-box">
@@ -38,22 +64,16 @@ const Header = ({ searchChageHandle, searchValue }) => {
             src="img/icons/clocks.svg"
             alt="clocks"
           />
-          <p className="header__work-time">We work from 10:00 to 00:00</p>
+          <p className="header__work-time">We work from 10:00 до 00:00</p>
         </div>
       </div>
-      {search.pathname !== '/order' && (
+      {search.pathname !== "/order" && (
         <div className="header__center">
           <div className="header__place">
             <p className="header__place-title">City:</p>
             <p className="header__info-place">Kyiv</p>
           </div>
           <div className="header__search">
-            <a href="#" className="header__link">
-              Reviews
-            </a>
-            <a href="#" className="header__link">
-              Sipping and payment
-            </a>
             <Search
               searchChageHandle={searchChageHandle}
               searchValue={searchValue}

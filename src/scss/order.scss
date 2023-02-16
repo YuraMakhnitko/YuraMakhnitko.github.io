@@ -1,14 +1,23 @@
 // ====================ORDER=============================
 
 .order {
-  // .order__go-back
-
-  &__go-back {
-  }
-
   // .order__title-label
 
   &__title-label {
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    margin: 30px 0px;
+  }
+  // .order____top-block-button
+
+  &__go-back-button {
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    width: 100%;
+    gap: 10px;
   }
 
   // .order__content-box
@@ -17,19 +26,23 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px;
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     @media (max-width: 1200px) {
       grid-template-columns: repeat(1, 1fr);
     }
   }
 
+  // .order__form
+
+  &__form {
+    margin-bottom: 52px;
+  }
   // .order__item
 
   &__item {
     display: flex;
     flex-direction: column;
     row-gap: 20px;
-    // max-width: 354px;
   }
 
   // .order__input-block
@@ -163,47 +176,32 @@
   }
 }
 
-.page-card {
-  // .page-card__top
-
-  &__top {
-  }
-
-  // .page-card__block-button
-
-  &__block-button {
-  }
-
-  // .page-card__button
-
-  &__button {
-  }
-
-  // .page-card__button-text
-
-  &__button-text {
-  }
-}
-
 // .popup-order
 .popup-box {
+  display: flex;
   position: absolute;
   bottom: 0;
   left: 50%;
   transition: transform 0.2s ease 0s;
   transform: translate(-50%, 0%) scale(0.0001);
+
   &_active {
     transform: translate(-50%, 10%) scale(1);
+    box-shadow: 0px 0px 18px 6px rgba(0, 0, 0, 0.09);
+    border-radius: 12px;
     width: 100%;
+    max-width: 90%;
   }
 }
 .popup-order {
-  display: flex;
+  display: inline-flex;
+  justify-self: center;
   justify-content: center;
   align-items: center;
   opacity: 1;
   transform: translate(-50%, 0%);
   transform: scale(1);
+  width: 100%;
 
   &__dark-backgound {
     position: absolute;
@@ -217,7 +215,7 @@
       display: block;
       width: 1000%;
       height: 1000%;
-      opacity: 0;
+      opacity: 0.1;
     }
   }
 
@@ -230,8 +228,8 @@
     color: #111111;
     font-family: "DINPro";
     font-style: normal;
-    max-width: 450px;
     z-index: 100;
+    width: 100%;
   }
 
   &__popup-title {
@@ -247,19 +245,22 @@
     line-height: 30px;
     text-align: center;
     opacity: 0.8;
-    margin-bottom: 20px;
   }
 
   &__popup-text {
     font-size: 14px;
     line-height: 30px;
     opacity: 0.8;
-    // margin-bottom: 10px;
+    & span {
+      font-weight: 500;
+    }
   }
 
   &__line {
     width: 100%;
     border-bottom: 0.5px solid #a4acad;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   &__close-button {
@@ -276,5 +277,9 @@
     height: 40px;
     color: #ff9846;
     opacity: 0.5;
+    transition: opacity 0.2s ease 0s;
+    &:hover {
+      opacity: 0.8;
+    }
   }
 }

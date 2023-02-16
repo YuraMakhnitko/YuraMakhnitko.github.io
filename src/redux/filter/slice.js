@@ -56,9 +56,9 @@ export const filterSlice = createSlice({
         (good) => good.category === state.category.categoryId
       );
     },
-    setGoods(state, action) {
-      // state.goodsSetted = action.payload;
-    },
+    // setGoods(state, action) {
+    //   state.goodsSetted = action.payload;
+    // },
     setSearchValue(state, action) {
       state.searchValue = action.payload;
 

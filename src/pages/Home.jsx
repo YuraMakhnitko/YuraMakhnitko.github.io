@@ -12,19 +12,19 @@ import FooterMobile from "../componetns/FooterMobile";
 import { useScreenWidth } from "../hooks/useScreenWidth";
 
 const slideItems = [
-  { path: "img/home/slider/01.jpg" },
-  { path: "img/home/slider/01.jpg" },
-  { path: "img/home/slider/01.jpg" },
-  { path: "img/home/slider/01.jpg" },
+  { path: "img/categories/rolls.jpg", discount: "25%", title: "rolls" },
+  { path: "img/categories/pizza.jpg", discount: "30%", title: "pizzas" },
+  { path: "img/categories/sushi.jpg", discount: "20%", title: "sushi" },
+  { path: "img/categories/sets.jpg", discount: "35%", title: "sets" },
 ];
-const slideItemsTwo = [
-  { path: "img/home/slidergoods/01.jpg" },
-  { path: "img/home/slidergoods/02.jpg" },
-  { path: "img/home/slidergoods/03.jpg" },
-  { path: "img/home/slidergoods/01.jpg" },
-  { path: "img/home/slidergoods/02.jpg" },
-  { path: "img/home/slidergoods/03.jpg" },
-];
+// const slideItemsTwo = [
+//   { path: "img/home/slidergoods/01.jpg" },
+//   { path: "img/home/slidergoods/02.jpg" },
+//   { path: "img/home/slidergoods/03.jpg" },
+//   { path: "img/home/slidergoods/01.jpg" },
+//   { path: "img/home/slidergoods/02.jpg" },
+//   { path: "img/home/slidergoods/03.jpg" },
+// ];
 
 let settings = {
   dots: true,
@@ -33,20 +33,19 @@ let settings = {
   slidesToShow: 1,
   slidesToScroll: 1,
   autoplay: true,
-  autoplaySpeed: 2000,
+  autoplaySpeed: 3000,
   arrows: false,
-  // adaptiveHeight: true,
 };
 
-let settingsTwo = {
-  dots: true,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 2000,
-};
+// let settingsTwo = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+// };
 
 const Home = () => {
   const categories = JSON.parse(JSON.stringify(catgoriesList));
@@ -88,132 +87,7 @@ const Home = () => {
             </div>
           </div>
         ))}
-        {/* <div className="goods__item">
-          <div className="goods__image-ibg">
-            <Link to="/goods" className="goods__link">
-              <img src="img/home/goods/001.png" alt="chicken" />
-              <p className="goods__text-item">Чикен</p>
-            </Link>
-          </div>
-        </div>
-        <div className="goods__item_small">
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/002.png" alt="pic" />
-                <p className="goods__text-item">С угрем</p>
-              </Link>
-            </div>
-          </div>
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/sets.png" alt="sets" />
-                <p className="goods__text-item">Сеты</p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="goods__item_small">
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/sushi.png" alt="sushi" />
-                <p className="goods__text-item">Суши</p>
-              </Link>
-            </div>
-          </div>
-          <div className="goods__item-small goods__item-small_disabled">
-            <div className="goods__item-small__image-ibg">
-              <Link to="" className="goods__link goods__link_disabled">
-                <img src="img/home/goods/soup.png" alt="soup" />
-                <p className="goods__text-item">Супы</p>
-                <div className="info info_goods">
-                  <p className="info__text">Soon</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="goods__item_small">
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/rolls.png" alt="rolls" />
-                <p className="goods__text-item">Роллы</p>
-              </Link>
-            </div>
-          </div>
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/003.png" alt="corndogs" />
-                <p className="goods__text-item">Корн дог</p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="goods__item_small">
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/pizza.png" alt="pizza" />
-                <p className="goods__text-item">Пицца</p>
-              </Link>
-            </div>
-          </div>
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/wok.png" alt="wok" />
-                <p className="goods__text-item">WOK</p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="goods__item">
-          <div className="goods__image-ibg">
-            <Link to="/goods" className="goods__link">
-              <img src="img/home/goods/combo.png" alt="combo" />
-              <p className="goods__text-item">Комбо</p>
-            </Link>
-          </div>
-        </div>
-        <div className="goods__item_small">
-          <div className="goods__item-small goods__item-small_disabled">
-            <div className="goods__item-small__image-ibg">
-              <Link to="" className="goods__link goods__link_disabled">
-                <img src="img/home/goods/salads.png" alt="salads" />
-                <p className="goods__text-item">Салаты</p>
-                <div className="info info_goods">
-                  <p className="info__text">Soon</p>
-                </div>
-              </Link>
-            </div>
-          </div>
-          <div className="goods__item-small">
-            <div className="goods__item-small__image-ibg">
-              <Link to="/goods" className="goods__link">
-                <img src="img/home/goods/drinks.png" alt="drinks" />
-                <p className="goods__text-item">Напитки</p>
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="goods__item goods__item_disabled">
-          <div className="goods__image-ibg">
-            <Link to="" className="goods__link goods__link_disabled">
-              <img src="img/home/goods/005.png" alt="actions" />
-              <p className="goods__text-item">Акции</p>
-              <div className="info info_goods">
-                <p className="info__text">Soon</p>
-              </div>
-            </Link>
-          </div>
-        </div> */}
       </section>
-
-      {/* <TopSlider slideItems={slideItemsTwo} settings={settingsTwo} /> */}
       <section className="shop-center__goods-slider slider-goods">
         <div className="slider-goods__top">
           <button className="slider-goods__link-top">New</button>

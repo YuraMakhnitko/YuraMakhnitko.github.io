@@ -2,9 +2,7 @@ import { BsFillXCircleFill } from "react-icons/bs";
 import { useSelector } from "react-redux";
 
 const OrderPopup = ({ userName, telephone, setOrderPopup }) => {
-  const { totalSumm, totalCount, orderPopup } = useSelector(
-    (state) => state.cart
-  );
+  const { totalSumm, totalCount } = useSelector((state) => state.cart);
 
   return (
     <div className="popup-order">
@@ -17,17 +15,21 @@ const OrderPopup = ({ userName, telephone, setOrderPopup }) => {
         </p>
         <div className="popup-order__line"></div>
         <p className="popup-order__popup-text">
-          Total amount of goods: {totalCount}
+          Total amount of goods: <span>{totalCount}</span>
         </p>
-        <p className="popup-order__popup-text">Total sum: {totalSumm} </p>
         <p className="popup-order__popup-text">
-          Your phone number: {telephone}
+          Total sum: <span>{totalSumm}</span> ₴
+        </p>
+        <p className="popup-order__popup-text">
+          Your phone number: <span>{telephone}</span>
         </p>
         <p className="popup-order__popup-text">
           We will contact you soon for clarification.
         </p>
         <div className="popup-order__line"></div>
-        <p className="popup-order__popup-text">Thank you for your order!</p>
+        <p className="popup-order__popup-text">
+          <span>Thank you for your order!</span>
+        </p>
         <button
           className="popup-order__close-button"
           onClick={() => setOrderPopup(false)}

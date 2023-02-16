@@ -1,5 +1,5 @@
-import { useDispatch, useSelector } from "react-redux";
-import { setCartItem, setInc, setClear } from "../redux/cart/slice";
+import { useDispatch } from "react-redux";
+import { setCartItem, setInc } from "../redux/cart/slice";
 
 const smallCounterButton = "counter__button counter__button_small";
 const counterButton = "counter__button ";

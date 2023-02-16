@@ -1,24 +1,24 @@
-import { useForm } from 'react-hook-form';
-import { useEffect, useRef } from 'react';
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useForm } from "react-hook-form";
+import { useEffect, useRef, useState } from "react";
+import { useSelector } from "react-redux";
 
-import PreFooter from '../componetns/PreFooter';
-import OrderPopup from '../componetns/OrderPopup';
-import { useState } from 'react';
+import { useScreenWidth } from "../hooks/useScreenWidth";
+import PreFooter from "../componetns/PreFooter";
+import OrderPopup from "../componetns/OrderPopup";
 
 const Order = () => {
-  const orderItemOn = 'order__radio-item_on';
+  const orderItemOn = "order__radio-item_on";
   const orderFinal = useSelector((state) => state.cart);
   const { cartItems, totalCount, totalSumm } = orderFinal;
   const [dataOrder, setDataOrder] = useState();
   const [orderPopup, setOrderPopup] = useState(false);
-  const orderPopUpActive = 'popup-box_active';
-  const orderPopUpBackActive = 'popup-order__dark-backgound_on';
+  const orderPopUpActive = "popup-box_active";
+  const orderPopUpBackActive = "popup-order__dark-backgound_on";
+
+  const widowSize = useScreenWidth();
 
   const popupRef = useRef();
   const buttonRef = useRef();
-  console.log(popupRef);
 
   const orderItems = cartItems.map((item) => ({
     ...item,
@@ -29,7 +29,6 @@ const Order = () => {
     setDataOrder({ ...data, orderItems, totalCount, totalSumm });
     console.log({ ...data, orderItems, totalCount, totalSumm });
   };
-  console.log(dataOrder);
 
   const {
     register,
@@ -47,42 +46,41 @@ const Order = () => {
     if (totalCount > 0 && isValid) {
       setOrderPopup(true);
     }
-    // setOrderPopup(!orderPopup);
   };
 
   useEffect(() => {
     if (payment.cash) {
-      setValue('card', false);
+      setValue("card", false);
     }
   }, [payment.cash, setValue]);
 
   useEffect(() => {
     if (payment.card) {
-      setValue('cash', false);
+      setValue("cash", false);
     }
   }, [payment.card, setValue]);
 
   useEffect(() => {
     if (delivery.courier) {
-      setValue('pickup', false);
+      setValue("pickup", false);
     }
   }, [delivery.courier, setValue]);
 
   useEffect(() => {
     if (delivery.pickup) {
-      setValue('courier', false);
+      setValue("courier", false);
     }
   }, [delivery.pickup, setValue]);
 
   useEffect(() => {
     if (shippingTime.toNow) {
-      setValue('forAWhile', false);
+      setValue("forAWhile", false);
     }
   }, [shippingTime.toNow, setValue]);
 
   useEffect(() => {
     if (shippingTime.forAWhile) {
-      setValue('toNow', false);
+      setValue("toNow", false);
     }
   }, [shippingTime.forAWhile, setValue]);
 
@@ -95,34 +93,8 @@ const Order = () => {
   return (
     <main className="shop-main">
       <section className="order">
-        <div className="order__go-back">
-          <div className="page-card__top">
-            <div className="page-card__block-button">
-              <button className="page-card__button">
-                <a href="index.html">
-                  <svg
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <circle cx="10" cy="10" r="10" fill="#FF9846" />
-                    <path
-                      d="M11.75 5.75L7.25 10.25L11.75 14.75"
-                      stroke="#F2F2F2"
-                      strokeLinecap="round"
-                    />
-                  </svg>
-                </a>
-              </button>
-              <p className="page-card__button-text">
-                <Link to="/goods">Continue selection</Link>
-              </p>
-            </div>
-          </div>
-        </div>
         <form
+          className="order__form"
           onSubmit={handleSubmit(onSomeSubmit)}
           style={{ position: `relative` }}
         >
@@ -136,8 +108,8 @@ const Order = () => {
                    Telephone"
                     className="order__input"
                     type="telephone"
-                    {...register('telephone', {
-                      required: '+00(000)000-00-00',
+                    {...register("telephone", {
+                      required: "+00(000)000-00-00",
                       pattern: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
                     })}
                   />
@@ -150,8 +122,8 @@ const Order = () => {
                     placeholder="Your name"
                     className="order__input"
                     type="userName"
-                    {...register('userName', {
-                      required: 'User name is required!',
+                    {...register("userName", {
+                      required: "User name is required!",
                       maxLength: 10,
                       pattern: /^[A-Za-z]+$/i,
                     })}
@@ -168,7 +140,7 @@ const Order = () => {
                       className={` ${
                         payment.cash
                           ? `order__radio-item ${orderItemOn}`
-                          : 'order__radio-item'
+                          : "order__radio-item"
                       }`}
                     >
                       <input
@@ -176,7 +148,7 @@ const Order = () => {
                         name="payment"
                         type="radio"
                         value="cash"
-                        {...register('cash', {
+                        {...register("cash", {
                           required: !payment.card && !payment.cash,
                         })}
                         placeholder="cash"
@@ -220,7 +192,7 @@ const Order = () => {
                       className={` ${
                         payment.card
                           ? `order__radio-item ${orderItemOn}`
-                          : 'order__radio-item'
+                          : "order__radio-item"
                       }`}
                     >
                       <input
@@ -228,7 +200,7 @@ const Order = () => {
                         name="payment"
                         type="radio"
                         value="card"
-                        {...register('card', {
+                        {...register("card", {
                           required: !payment.cash && !payment.card,
                         })}
                         className="order__payment"
@@ -280,7 +252,7 @@ const Order = () => {
               <div className="order__input-box">
                 <input
                   type="comment"
-                  {...register('comment', {
+                  {...register("comment", {
                     maxLength: 100,
                   })}
                   className="order__comment"
@@ -292,7 +264,7 @@ const Order = () => {
               </div>
               <div className="order__input-box">
                 <input
-                  {...register('promocode', {
+                  {...register("promocode", {
                     maxLength: 8,
                   })}
                   type="promocode"
@@ -312,13 +284,13 @@ const Order = () => {
                       className={` ${
                         delivery.courier
                           ? `order__radio-item ${orderItemOn}`
-                          : 'order__radio-item'
+                          : "order__radio-item"
                       }`}
                     >
                       <input
                         type="radio"
                         value="courier"
-                        {...register('courier', {
+                        {...register("courier", {
                           required: !delivery.pickup && !delivery.courier,
                         })}
                       />
@@ -333,13 +305,13 @@ const Order = () => {
                       className={` ${
                         delivery.pickup
                           ? `order__radio-item ${orderItemOn}`
-                          : 'order__radio-item'
+                          : "order__radio-item"
                       }`}
                     >
                       <input
                         type="radio"
                         value="pickup"
-                        {...register('pickup', {
+                        {...register("pickup", {
                           required: !delivery.courier && !delivery.pickup,
                         })}
                       />
@@ -355,7 +327,7 @@ const Order = () => {
                 <div className="order__input-box">
                   <input
                     disabled={delivery.pickup}
-                    {...register('street', {
+                    {...register("street", {
                       required: delivery.pickup ? false : true,
                       maxLength: 20,
                     })}
@@ -370,7 +342,7 @@ const Order = () => {
                 <div className="order__input-box">
                   <input
                     disabled={delivery.pickup}
-                    {...register('house', {
+                    {...register("house", {
                       required: delivery.pickup ? false : true,
                       maxLength: 4,
                     })}
@@ -389,13 +361,13 @@ const Order = () => {
                     className={` ${
                       shippingTime.toNow
                         ? `order__radio-item ${orderItemOn}`
-                        : 'order__radio-item'
+                        : "order__radio-item"
                     }`}
                   >
                     <input
                       type="radio"
                       value="toNow"
-                      {...register('toNow', {
+                      {...register("toNow", {
                         required:
                           !shippingTime.forAWhile && !shippingTime.toNow,
                       })}
@@ -411,13 +383,13 @@ const Order = () => {
                     className={` ${
                       shippingTime.forAWhile
                         ? `order__radio-item ${orderItemOn}`
-                        : 'order__radio-item'
+                        : "order__radio-item"
                     }`}
                   >
                     <input
                       type="radio"
                       value="forAWhile"
-                      {...register('forAWhile', {
+                      {...register("forAWhile", {
                         required:
                           !shippingTime.toNow && !shippingTime.forAWhile,
                       })}
@@ -431,7 +403,7 @@ const Order = () => {
               </div>
               <input
                 type="email"
-                {...register('email', {
+                {...register("email", {
                   pattern:
                     /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
                 })}
@@ -441,10 +413,24 @@ const Order = () => {
               />
             </div>
           </div>
+          {widowSize.width < 991.98 && (
+            <div className="cart__bottom">
+              <p className="cart__bottom-title">Total</p>
+              <div className="cart__total-count">
+                <p className="cart__total-count-title">Amount</p>
+                <p className="cart__total-count-value">{totalCount} goods</p>
+              </div>
+              <div className="cart__total-sum">
+                <p className=" cart__total-sum_cart-in-order">Sum</p>
+                <p className="cart__total-sum_cart-in-order">{totalSumm} ₴</p>
+              </div>
+            </div>
+          )}
+
           <div
             ref={popupRef}
             className={`${
-              orderPopup ? `popup-box ${orderPopUpActive}` : 'popup-box'
+              orderPopup ? `popup-box ${orderPopUpActive}` : "popup-box"
             }`}
           >
             <div
@@ -462,8 +448,9 @@ const Order = () => {
               orderPopup={orderPopup}
             />
           </div>
+
           <button
-            className="order-button"
+            className="order-button order-button_in-order-bottom"
             type="submit"
             onClick={popupHandler}
             ref={buttonRef}
