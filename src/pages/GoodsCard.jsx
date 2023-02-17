@@ -11,6 +11,7 @@ import Counter from "../componetns/Counter";
 import FooterMobile from "../componetns/FooterMobile";
 
 const GoodsCard = () => {
+  window.scrollTo(0, 0);
   const screenSize = useScreenWidth();
 
   const cardItems = useSelector((state) => state.filter.goodsSetted);

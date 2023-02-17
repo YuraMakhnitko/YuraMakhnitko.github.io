@@ -1,16 +1,26 @@
-import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setCategory } from '../redux/filter/slice';
+import { useEffect } from "react";
 
-import TopSlider from '../componetns/TopSlider';
-import PreFooter from '../componetns/PreFooter';
-import catgoriesList from '../redux/settings/categories.json';
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setCategory } from "../redux/filter/slice";
 
-import 'react-awesome-slider/dist/styles.css';
-import FooterMobile from '../componetns/FooterMobile';
-import { slideItems } from '../redux/settings/actionsItems';
+import TopSlider from "../componetns/TopSlider";
+import PreFooter from "../componetns/PreFooter";
+import catgoriesList from "../redux/settings/categories.json";
 
-import { useScreenWidth } from '../hooks/useScreenWidth';
+import FooterMobile from "../componetns/FooterMobile";
+
+import { useScreenWidth } from "../hooks/useScreenWidth";
+import { slideItems } from "../redux/settings/actionsItems";
+
+// const slideItemsTwo = [
+//   { path: "img/home/slidergoods/01.jpg" },
+//   { path: "img/home/slidergoods/02.jpg" },
+//   { path: "img/home/slidergoods/03.jpg" },
+//   { path: "img/home/slidergoods/01.jpg" },
+//   { path: "img/home/slidergoods/02.jpg" },
+//   { path: "img/home/slidergoods/03.jpg" },
+// ];
 
 let settings = {
   dots: true,
@@ -23,13 +33,28 @@ let settings = {
   arrows: false,
 };
 
+// let settingsTwo = {
+//   dots: true,
+//   infinite: true,
+//   speed: 500,
+//   slidesToShow: 3,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+// };
+
 const Home = () => {
   const categories = JSON.parse(JSON.stringify(catgoriesList));
   const dispatch = useDispatch();
-  const disabledStyle = 'goods__link_disabled';
-  const disabledStyleItem = 'goods__item_disabled';
+  const disabledStyle = "goods__link_disabled";
+  const disabledStyleItem = "goods__item_disabled";
 
   const windowSize = useScreenWidth();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <main className="shop-main">
       <section className="main-banner">
@@ -39,15 +64,15 @@ const Home = () => {
         {categories.map((category) => (
           <div
             className={`goods__item ${
-              category.isSoon ? disabledStyleItem : ''
+              category.isSoon ? disabledStyleItem : ""
             }`}
             key={category.categoryId}
           >
             <div className="goods__image-ibg">
               <Link
-                to={`${category.isSoon ? '' : '/goods'}`}
+                to={`${category.isSoon ? "" : "/goods"}`}
                 className={`goods__link ${
-                  category.isSoon ? disabledStyle : ''
+                  category.isSoon ? disabledStyle : ""
                 }`}
                 onClick={() => dispatch(setCategory({ ...category }))}
               >

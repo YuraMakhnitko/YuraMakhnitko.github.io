@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useScreenWidth } from "../hooks/useScreenWidth";
 import PreFooter from "../componetns/PreFooter";
 import OrderPopup from "../componetns/OrderPopup";
+import FooterMobile from "../componetns/FooterMobile";
 
 const Order = () => {
   const orderItemOn = "order__radio-item_on";
@@ -19,6 +20,10 @@ const Order = () => {
 
   const popupRef = useRef();
   const buttonRef = useRef();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const orderItems = cartItems.map((item) => ({
     ...item,
@@ -457,8 +462,10 @@ const Order = () => {
           >
             Checkout
           </button>
+          {widowSize.width < 991.98 && <FooterMobile />}
         </form>
       </section>
+
       <PreFooter />
     </main>
   );

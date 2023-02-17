@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router";
 import { Link } from "react-router-dom";
 import { useScreenWidth } from "../hooks/useScreenWidth";
+import { GiSushis } from "react-icons/gi";
 
 import Search from "./Search";
 
@@ -15,11 +16,9 @@ const Header = ({ searchChageHandle, searchValue }) => {
   return (
     <header className="header">
       <Link to="/" className="healer__logo-link">
-        <img
-          className="header__logo"
-          src="img/leftsidebar/logo.svg"
-          alt="logo"
-        />
+        <div className="sushi-logo sushi-logo_mobile">
+          <GiSushis className="sushi-icon sushi-icon_mobile" />
+        </div>
       </Link>
       {search.pathname === "/order" && widowSize.width > 991.98 && (
         <div className="order__go-back-button">
@@ -64,20 +63,29 @@ const Header = ({ searchChageHandle, searchValue }) => {
             src="img/icons/clocks.svg"
             alt="clocks"
           />
-          <p className="header__work-time">We work from 10:00 до 00:00</p>
+          <p className="header__work-time">We work from 10:00 to 00:00</p>
         </div>
       </div>
-      {search.pathname !== "/order" && (
+      {search.pathname !== "/order" && search.pathname !== "/cart" && (
         <div className="header__center">
           <div className="header__place">
             <p className="header__place-title">City:</p>
             <p className="header__info-place">Kyiv</p>
           </div>
           <div className="header__search">
-            <Search
-              searchChageHandle={searchChageHandle}
-              searchValue={searchValue}
-            />
+            {search.pathname !== "/" ? (
+              <Search
+                searchChageHandle={searchChageHandle}
+                searchValue={searchValue}
+              />
+            ) : (
+              <div className="header__lang">
+                <button className="header__lang-button header__lang-button_active">
+                  En
+                </button>
+                <button className="header__lang-button">Ua</button>
+              </div>
+            )}
           </div>
         </div>
       )}

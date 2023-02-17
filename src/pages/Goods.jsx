@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 import GoodsItem from "../componetns/goodsItem";
@@ -13,6 +14,9 @@ const Goods = () => {
   const { goodsSetted } = useSelector((state) => state.filter);
 
   const windowSize = useScreenWidth();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [category, goodsSetted]);
 
   return (
     <main className="shop-main">
@@ -33,8 +37,8 @@ const Goods = () => {
             <GoodsItem key={good.id} good={good} />
           ))}
         </div>
+        {windowSize.width < 991.98 && <FooterMobile />}
       </section>
-      {windowSize.width < 991.98 && <FooterMobile />}
       <PreFooter />
     </main>
   );

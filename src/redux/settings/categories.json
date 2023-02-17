@@ -3,35 +3,35 @@
     "title": "Pizza",
     "categoryId": 1,
     "imgUrl": "img/icons/pizza.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/465763436/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BC%D0%B0%D1%87%D0%BD%D0%B0-%D1%81%D0%B8%D1%80%D0%BD%D0%B0-%D0%BF%D1%96%D1%86%D0%B0-%D0%B7-%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%BD%D0%B8%D0%BC-%D1%81%D0%BE%D1%83%D1%81%D0%BE%D0%BC-%D1%96-%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC-%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D0%B8%D0%BC-%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%BC.jpg?s=612x612&w=0&k=20&c=OxNcd_WNxAD8uedONTIE-ArIkzgekoK-PlZbOhNRgSI=",
+    "imgBigUrl": "https://images.pexels.com/photos/2619970/pexels-photo-2619970.jpeg?auto=compress&cs=tinysrgb&w=600",
     "isSoon": false
   },
   {
     "title": "Sets",
     "categoryId": 2,
     "imgUrl": "img/icons/sets.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/495914931/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%8F%D0%BF%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B8%D0%B9-%D0%BD%D0%B0%D0%B1%D1%96%D1%80-%D1%81%D1%83%D1%88%D1%96-%D0%BC%D0%BE%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%96%D0%B2.jpg?s=612x612&w=0&k=20&c=5AjqhRa6FmtUt7P6udxV4U5lovQNHFmFeWemdjJtDEM=",
+    "imgBigUrl": "https://media.istockphoto.com/id/1250712885/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D1%83%D1%88%D1%96-%D1%84%D1%96%D0%BB%D0%B0%D0%B4%D0%B5%D0%BB%D1%8C%D1%84%D1%96%D1%8F-%D1%80%D0%BE%D0%BB%D0%B8-%D0%BA%D0%B0%D0%BB%D1%96%D1%84%D0%BE%D1%80%D0%BD%D1%96%D1%8F-%D0%BC%D0%B0%D0%B9%D0%B0%D0%BC%D1%96-%D1%80%D0%BE%D0%BB%D0%B8-%D1%96-%D1%81%D0%BF%D0%B5%D0%BA%D1%82%D0%B8-%D0%BA%D0%BB%D0%B0%D1%81%D0%B8%D1%87%D0%BD%D1%96-%D1%80%D0%BE%D0%BB%D1%96-%D0%BD%D0%B0-%D0%B1%D0%BE%D1%80%D1%82%D1%83-%D0%B7-%D0%B1%D0%B0%D0%BC%D0%B1%D1%83%D0%BA%D0%B0-%D1%81%D1%83%D1%88%D1%96.jpg?s=612x612&w=0&k=20&c=HiS0C04EE0s2zFvSWp4KJ1eqxCaE0gvk_YMNexAaaz0=",
     "isSoon": false
   },
   {
     "title": "WOK",
     "categoryId": 3,
     "imgUrl": "img/icons/wok.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/1347038363/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D1%96%D1%88%D0%B0%D1%82%D0%B8-%D1%81%D0%BC%D0%B0%D0%B6%D0%B8%D1%82%D0%B8-%D0%B7-%D0%BA%D1%83%D1%80%D0%BA%D0%BE%D1%8E-%D0%B1%D0%B0%D0%BA%D0%BB%D0%B0%D0%B6%D0%B0%D0%BD%D0%B0%D0%BC%D0%B8-%D0%BA%D0%B0%D0%B1%D0%B0%D1%87%D0%BA%D0%B0%D0%BC%D0%B8-%D1%96-%D1%81%D0%BE%D0%BB%D0%BE%D0%B4%D0%BA%D0%B8%D0%BC-%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC-%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D1%8E-%D1%97%D0%B6%D0%B5%D1%8E-%D0%B2%D0%B8%D0%B4-%D0%B7%D0%B2%D0%B5%D1%80%D1%85%D1%83.jpg?s=612x612&w=0&k=20&c=i8Qe9qReAtFVE6SUEXtFwUMR48Kya1eFIYPefCHJZ_c=",
+    "imgBigUrl": "https://media.istockphoto.com/id/1327420186/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BF%D0%B5%D1%80%D0%B5%D0%BC%D1%96%D1%88%D0%B0%D1%82%D0%B8-%D1%81%D0%BC%D0%B0%D0%B6%D0%B8%D1%82%D0%B8-%D0%B7-%D0%BA%D1%83%D1%80%D0%BA%D0%BE%D1%8E-%D0%BA%D0%B0%D0%B1%D0%B0%D1%87%D0%BA%D0%B0%D0%BC%D0%B8-%D1%96-%D1%81%D0%BE%D0%BB%D0%BE%D0%B4%D0%BA%D0%B8%D0%BC-%D0%BF%D0%B5%D1%80%D1%86%D0%B5%D0%BC-%D0%BA%D0%B8%D1%82%D0%B0%D0%B9%D1%81%D1%8C%D0%BA%D0%BE%D1%8E-%D1%97%D0%B6%D0%B5%D1%8E-%D0%B2%D0%B8%D0%B4-%D0%B7%D0%B2%D0%B5%D1%80%D1%85%D1%83-%D0%B2%D0%B8%D1%89%D0%B5.jpg?s=612x612&w=0&k=20&c=V_bA-SbcfIjMpfChgXbUYO31s73wfvVjMsoGNQRxboY=",
     "isSoon": false
   },
   {
     "title": "Rolls",
     "categoryId": 4,
     "imgUrl": "img/icons/rolls.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/1302000400/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%BB%D0%BE%D1%81%D0%BE%D1%81%D0%B5%D0%B2%D1%96-%D1%81%D1%83%D1%88%D1%96-%D1%80%D0%BE%D0%BB%D0%B8.jpg?s=612x612&w=0&k=20&c=5NqQhY-nkaJ3YDeqs1Yek8otUZpBw0-x81x-SilScvM=",
+    "imgBigUrl": "https://media.istockphoto.com/id/471994936/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%B0%D1%81%D0%BE%D1%80%D1%82%D0%B8%D0%BC%D0%B5%D0%BD%D1%82-%D1%81%D1%83%D1%88%D1%96-%D0%BD%D0%B0-%D0%B1%D1%96%D0%BB%D1%83-%D1%81%D1%82%D1%80%D0%B0%D0%B2%D1%83.jpg?s=612x612&w=0&k=20&c=_TvJYLY6c9gCrOQWAOVMudNd_4kjgYnON69eCvC-VEI=",
     "isSoon": false
   },
   {
     "title": "Sushi",
     "categoryId": 5,
     "imgUrl": "img/icons/sushi.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/504985598/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%8F%D0%BF%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D1%96-%D1%81%D1%83%D1%88%D1%96-%D0%B7-%D0%BC%D0%BE%D1%80%D0%B5%D0%BF%D1%80%D0%BE%D0%B4%D1%83%D0%BA%D1%82%D1%96%D0%B2.jpg?s=612x612&w=0&k=20&c=Gvlq3NN7OrnexJfNeoCia_SA62o3RNoenB6MLGJiD9U=",
+    "imgBigUrl": "https://media.istockphoto.com/id/1303043563/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BC%D0%B0%D1%87%D0%BD%D0%B0-%D1%8F%D0%BF%D0%BE%D0%BD%D1%81%D1%8C%D0%BA%D0%B0-%D1%97%D0%B6%D0%B0.jpg?s=612x612&w=0&k=20&c=S3oukGa8JE8tpeBcLoIbc-oY3ICjW6yPnlkfla2xH2c=",
     "isSoon": false
   },
   {
@@ -52,14 +52,14 @@
     "title": "Corn-Dogs",
     "categoryId": 8,
     "imgUrl": "img/icons/corndogs.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/1404888245/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BC%D0%B0%D1%87%D0%BD%D1%96-%D0%BA%D1%83%D0%BA%D1%83%D1%80%D1%83%D0%B4%D0%B7%D1%8F%D0%BD%D1%96-%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B8-%D1%83-%D1%84%D1%80%D0%B8%D1%82%D1%8E%D1%80%D1%96-%D0%B7-%D1%81%D0%B0%D0%BB%D0%B0%D1%82%D0%BE%D0%BC-%D1%96-%D1%81%D0%BE%D1%83%D1%81%D0%B0%D0%BC%D0%B8-%D0%BD%D0%B0-%D1%81%D1%96%D1%80%D0%BE%D0%BC%D1%83-%D1%81%D1%82%D0%BE%D0%BB%D1%96-%D0%BA%D1%80%D1%83%D0%BF%D0%BD%D0%B8%D0%BC-%D0%BF%D0%BB%D0%B0%D0%BD%D0%BE%D0%BC.jpg?s=612x612&w=0&k=20&c=XBbhc2o02TbWnVMLjdmU5i1NIpIkJ-WA511pqVjb1dQ=",
+    "imgBigUrl": "https://media.istockphoto.com/id/674365124/uk/%D1%84%D0%BE%D1%82%D0%BE/%D0%B4%D0%BE%D0%BC%D0%B0%D1%88%D0%BD%D1%96-%D1%81%D0%BC%D0%B0%D0%B6%D0%B5%D0%BD%D1%96-%D0%BA%D1%83%D0%BA%D1%83%D1%80%D1%83%D0%B4%D0%B7%D1%8F%D0%BD%D1%96-%D1%81%D0%BE%D0%B1%D0%B0%D0%BA%D0%B8.jpg?s=612x612&w=0&k=20&c=0jEmpkXriV0OqsMSkPdjgLDULdf3bU9exbLzbUkdDSA=",
     "isSoon": false
   },
   {
     "title": "Drinks",
     "categoryId": 9,
     "imgUrl": "img/icons/drinks.svg",
-    "imgBigUrl": "https://media.istockphoto.com/id/876497484/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BA%D0%BB%D1%8F%D0%BD%D0%BA%D0%B8-%D0%B7%D1%96-%D1%81%D0%B2%D1%96%D0%B6%D0%B8%D0%BC%D0%B8-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BE%D0%B2%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%BC%D0%B8-%D1%82%D0%B0-%D1%84%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%B8%D0%BC%D0%B8-%D1%81%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=IHhpjWgLNiMdxgv5wcGyfO9HEdkNnhrS6nE9zdKDCdY=",
+    "imgBigUrl": "https://media.istockphoto.com/id/1093514516/uk/%D1%84%D0%BE%D1%82%D0%BE/%D1%81%D0%BA%D0%BB%D1%8F%D0%BD%D0%BA%D0%B8-%D0%B7%D1%96-%D1%81%D0%B2%D1%96%D0%B6%D0%B8%D0%BC%D0%B8-%D0%BE%D1%80%D0%B3%D0%B0%D0%BD%D1%96%D1%87%D0%BD%D0%B8%D0%BC%D0%B8-%D0%BE%D0%B2%D0%BE%D1%87%D0%B5%D0%B2%D0%B8%D0%BC%D0%B8-%D1%82%D0%B0-%D1%84%D1%80%D1%83%D0%BA%D1%82%D0%BE%D0%B2%D0%B8%D0%BC%D0%B8-%D1%81%D0%BE%D0%BA%D0%B0%D0%BC%D0%B8.jpg?s=612x612&w=0&k=20&c=8o71o-evn2yjEWyFsBO1eHkXxnRc8_Zgj6j56uWzCXM=",
     "isSoon": false
   },
   {
