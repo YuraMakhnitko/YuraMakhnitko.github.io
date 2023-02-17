@@ -230,15 +230,17 @@
     right: 0;
     width: 50%;
     background-color: unset;
-    transition: 0.3s ease 0s;
+    transition: 0.2s ease 0s;
     padding: 5px 15px;
     height: 40px;
-    font-family: "DINPro";
+    font-family: 'DINPro';
     transform: translate(0%, -50%);
     opacity: 1;
     outline: 0.5px solid rgba(164, 172, 173, 0.2);
     z-index: 5;
     border-radius: 5px;
+    font-size: 16px;
+
     @media (max-width: 1550px) {
       width: 80%;
     }
@@ -253,7 +255,6 @@
     &:focus {
       width: 100%;
       background-color: #ffffff;
-      font-size: 16px;
       outline: 0.5px solid #f2f2f2;
 
       @media (max-width: 768.91px) {
