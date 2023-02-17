@@ -27,7 +27,6 @@
   &__logo-block {
     display: flex;
     flex-direction: column;
-    gap: 10px;
     cursor: pointer;
     &:not(:last-child) {
       margin-bottom: 31px;
@@ -37,7 +36,7 @@
   // .sidebar-left__title
 
   &__title {
-    font-family: "Nexa";
+    font-family: 'Nexa';
     font-weight: 300;
     font-size: 30px;
     line-height: 1;
