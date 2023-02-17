@@ -1,17 +1,17 @@
-import { Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { setCartItem, setInc } from "../redux/cart/slice";
-import { setCategory } from "../redux/filter/slice";
-import Slider from "react-slick";
+import { setCartItem, setInc } from '../redux/cart/slice';
+import { setCategory } from '../redux/filter/slice';
+import Slider from 'react-slick';
 
-import { useScreenWidth } from "../hooks/useScreenWidth";
-import PreFooter from "../componetns/PreFooter";
-import Counter from "../componetns/Counter";
-import FooterMobile from "../componetns/FooterMobile";
+import { useScreenWidth } from '../hooks/useScreenWidth';
+import PreFooter from '../componetns/PreFooter';
+import Counter from '../componetns/Counter';
+import FooterMobile from '../componetns/FooterMobile';
+import { useEffect } from 'react';
 
 const GoodsCard = () => {
-  window.scrollTo(0, 0);
   const screenSize = useScreenWidth();
 
   const cardItems = useSelector((state) => state.filter.goodsSetted);
@@ -37,10 +37,10 @@ const GoodsCard = () => {
 
   const dispatch = useDispatch();
 
-  let goodMeasuring = "gramm";
+  let goodMeasuring = 'gramm';
 
   if (cardItem.category === 9) {
-    goodMeasuring = "ml volume";
+    goodMeasuring = 'ml volume';
   }
 
   const addItemHandle = (item) => {
@@ -51,6 +51,10 @@ const GoodsCard = () => {
       })
     );
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   return (
     <main className="shop-main">
