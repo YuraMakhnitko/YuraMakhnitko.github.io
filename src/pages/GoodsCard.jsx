@@ -135,7 +135,7 @@ const GoodsCard = () => {
                     onClick={() => addItemHandle(item)}
                     className="good-card__button card__button"
                   >
-                    Want!
+                    {lang ? 'Хочу!' : 'Want!'}
                   </button>
                 </div>
               </div>
