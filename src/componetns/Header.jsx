@@ -3,34 +3,18 @@ import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useScreenWidth } from '../hooks/useScreenWidth';
 import { GiSushis } from 'react-icons/gi';
-import { useDispatch, useSelector } from 'react-redux';
 
 import Search from './Search';
-import { setHeight } from '../redux/header/slice';
-import { useEffect } from 'react';
 
 const orderHeaderStyle = 'header__contacts_order';
 
 const Header = ({ searchChageHandle, searchValue }) => {
   const search = useLocation();
-  const dispatch = useDispatch();
-  const fff = useSelector((state) => state.header.headerHeight);
-  console.log(fff);
-
-  const headerRef = useRef();
-  console.log(headerRef);
-
-  useEffect(() => {
-    dispatch(
-      setHeight(headerRef.current.offsetHeight + headerRef.current.offsetTop)
-    );
-    console.log(headerRef);
-  }, []);
 
   const widowSize = useScreenWidth();
 
   return (
-    <header className="header" ref={headerRef}>
+    <header className="header">
       <Link to="/" className="healer__logo-link">
         <div className="sushi-logo sushi-logo_mobile">
           <GiSushis className="sushi-icon sushi-icon_mobile" />
