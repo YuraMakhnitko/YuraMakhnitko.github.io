@@ -1,26 +1,42 @@
-import React from "react";
-import { useLocation } from "react-router";
-import { Link } from "react-router-dom";
-import { useScreenWidth } from "../hooks/useScreenWidth";
-import { GiSushis } from "react-icons/gi";
+import React, { useRef } from 'react';
+import { useLocation } from 'react-router';
+import { Link } from 'react-router-dom';
+import { useScreenWidth } from '../hooks/useScreenWidth';
+import { GiSushis } from 'react-icons/gi';
+import { useDispatch, useSelector } from 'react-redux';
 
-import Search from "./Search";
+import Search from './Search';
+import { setHeight } from '../redux/header/slice';
+import { useEffect } from 'react';
 
-const orderHeaderStyle = "header__contacts_order";
+const orderHeaderStyle = 'header__contacts_order';
 
 const Header = ({ searchChageHandle, searchValue }) => {
   const search = useLocation();
+  const dispatch = useDispatch();
+  const fff = useSelector((state) => state.header.headerHeight);
+  console.log(fff);
+
+  const headerRef = useRef();
+  console.log(headerRef);
+
+  useEffect(() => {
+    dispatch(
+      setHeight(headerRef.current.offsetHeight + headerRef.current.offsetTop)
+    );
+    console.log(headerRef);
+  }, []);
 
   const widowSize = useScreenWidth();
 
   return (
-    <header className="header">
+    <header className="header" ref={headerRef}>
       <Link to="/" className="healer__logo-link">
         <div className="sushi-logo sushi-logo_mobile">
           <GiSushis className="sushi-icon sushi-icon_mobile" />
         </div>
       </Link>
-      {search.pathname === "/order" && widowSize.width > 991.98 && (
+      {search.pathname === '/order' && widowSize.width > 991.98 && (
         <div className="order__go-back-button">
           <Link to="/">
             <svg
@@ -45,7 +61,7 @@ const Header = ({ searchChageHandle, searchValue }) => {
       )}
       <div
         className={`header__contacts ${
-          search.pathname === "/order" ? orderHeaderStyle : ""
+          search.pathname === '/order' ? orderHeaderStyle : ''
         }`}
       >
         <div className="header__contacts-box">
@@ -66,14 +82,14 @@ const Header = ({ searchChageHandle, searchValue }) => {
           <p className="header__work-time">We work from 10:00 to 00:00</p>
         </div>
       </div>
-      {search.pathname !== "/order" && search.pathname !== "/cart" && (
+      {search.pathname !== '/order' && search.pathname !== '/cart' && (
         <div className="header__center">
           <div className="header__place">
             <p className="header__place-title">City:</p>
             <p className="header__info-place">Kyiv</p>
           </div>
           <div className="header__search">
-            {search.pathname !== "/" ? (
+            {search.pathname !== '/' ? (
               <Search
                 searchChageHandle={searchChageHandle}
                 searchValue={searchValue}

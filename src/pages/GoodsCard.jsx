@@ -9,7 +9,7 @@ import { useScreenWidth } from '../hooks/useScreenWidth';
 import PreFooter from '../componetns/PreFooter';
 import Counter from '../componetns/Counter';
 import FooterMobile from '../componetns/FooterMobile';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 
 const GoodsCard = () => {
   const screenSize = useScreenWidth();
@@ -18,6 +18,17 @@ const GoodsCard = () => {
   const cardItem = useSelector((state) => state.card.cardItem);
   const category = useSelector((state) => state.filter.category);
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const headerHeight = useSelector((state) => state.header.headerHeight);
+
+  const cardTop = useRef();
+
+  // cardTop.getBoundingClientRect();
+  console.log(cardTop);
+  // const rect = cardTop.current.getBoundingClientRect();
+
+  // console.log(cardTop.current.getBoundingClientRect());
+  // confirm.log(rect.top)
+  let p = 120;
 
   const firstSlideIndex = cardItems.findIndex(
     (item) => item.id === cardItem.id
@@ -53,13 +64,13 @@ const GoodsCard = () => {
   };
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, headerHeight);
   }, []);
 
   return (
     <main className="shop-main">
       <section className="page-card">
-        <div className="page-card__top">
+        <div className="page-card__top" ref={cardTop}>
           <div className="page-card__block-button">
             <Link
               to="/goods"
