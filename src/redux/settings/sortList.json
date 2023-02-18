@@ -1,8 +1,38 @@
 [
-  { "titleFilter": "By default", "field": null, "desk": 0 },
-  { "titleFilter": "By name", "field": "title", "desk": 1 },
-  { "titleFilter": "First cheaper", "field": "price", "desk": 1 },
-  { "titleFilter": "More expensive", "field": "price", "desk": -1 },
-  { "titleFilter": "By pieces", "field": "pieces", "desk": 1 },
-  { "titleFilter": "By weight", "field": "weight", "desk": 1 }
+  {
+    "titleFilter": "By default",
+    "titleFilterUa": "Початкове",
+    "field": null,
+    "desk": 0
+  },
+  {
+    "titleFilter": "By name",
+    "titleFilterUa": "За назвою",
+    "field": "title",
+    "desk": 1
+  },
+  {
+    "titleFilter": "First cheaper",
+    "titleFilterUa": "Спочатку дешевше",
+    "field": "price",
+    "desk": 1
+  },
+  {
+    "titleFilter": "More expensive",
+    "titleFilterUa": "Спочатку дорожче",
+    "field": "price",
+    "desk": -1
+  },
+  {
+    "titleFilter": "By pieces",
+    "titleFilterUa": "За кількістю",
+    "field": "pieces",
+    "desk": 1
+  },
+  {
+    "titleFilter": "By weight",
+    "titleFilterUa": "За вагою",
+    "field": "weight",
+    "desk": 1
+  }
 ]

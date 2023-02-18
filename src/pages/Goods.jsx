@@ -1,17 +1,18 @@
-import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useEffect } from 'react';
+import { useSelector } from 'react-redux';
 
-import GoodsItem from "../componetns/goodsItem";
-import { useScreenWidth } from "../hooks/useScreenWidth";
+import GoodsItem from '../componetns/goodsItem';
+import { useScreenWidth } from '../hooks/useScreenWidth';
 
-import Sort from "../componetns/Sort";
-import FooterMobile from "../componetns/FooterMobile";
+import Sort from '../componetns/Sort';
+import FooterMobile from '../componetns/FooterMobile';
 
-import PreFooter from "../componetns/PreFooter";
+import PreFooter from '../componetns/PreFooter';
 
 const Goods = () => {
   const category = useSelector((state) => state.filter.category);
   const { goodsSetted } = useSelector((state) => state.filter);
+  const lang = useSelector((state) => state.lang.type);
 
   const windowSize = useScreenWidth();
   useEffect(() => {
@@ -28,7 +29,9 @@ const Goods = () => {
               src={category.imgUrl}
               alt="sets"
             />
-            <p className="goods-page__text">{category.title}</p>
+            <p className="goods-page__text">
+              {lang ? category.titleUa : category.title}
+            </p>
           </div>
           <Sort />
         </div>

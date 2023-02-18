@@ -1,8 +1,11 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
 import { useScreenWidth } from '../hooks/useScreenWidth';
 import { GiSushis } from 'react-icons/gi';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { setLang } from '../redux/lang/slice';
 
 import Search from './Search';
 
@@ -10,8 +13,17 @@ const orderHeaderStyle = 'header__contacts_order';
 
 const Header = ({ searchChageHandle, searchValue }) => {
   const search = useLocation();
+  const dispatsh = useDispatch();
+  const lang = useSelector((state) => state.lang.type);
+
+  const langActive = 'header__lang-button_active';
+  console.log(lang);
 
   const widowSize = useScreenWidth();
+
+  const handleLangHange = () => {
+    dispatsh(setLang(!lang));
+  };
 
   return (
     <header className="header">
@@ -39,7 +51,9 @@ const Header = ({ searchChageHandle, searchValue }) => {
             </svg>
           </Link>
           <Link to="/">
-            <p className="page-card__button-text">Continue selection</p>
+            <p className="page-card__button-text">
+              {lang ? 'Продовжити вибір' : 'Continue selection'}
+            </p>
           </Link>
         </div>
       )}
@@ -49,7 +63,9 @@ const Header = ({ searchChageHandle, searchValue }) => {
         }`}
       >
         <div className="header__contacts-box">
-          <p className="header__contacts-text">Our phones</p>
+          <p className="header__contacts-text">
+            {lang ? 'Наші телефони' : 'Our phones'}
+          </p>
           <a href="#" className="header__contacts-tel">
             +000 000 00 955
           </a>
@@ -63,14 +79,16 @@ const Header = ({ searchChageHandle, searchValue }) => {
             src="img/icons/clocks.svg"
             alt="clocks"
           />
-          <p className="header__work-time">We work from 10:00 to 00:00</p>
+          <p className="header__work-time">
+            {lang ? 'Працюємо з 10:00 до 00:00' : 'We work from 10:00 to 00:00'}
+          </p>
         </div>
       </div>
       {search.pathname !== '/order' && search.pathname !== '/cart' && (
         <div className="header__center">
           <div className="header__place">
-            <p className="header__place-title">City:</p>
-            <p className="header__info-place">Kyiv</p>
+            <p className="header__place-title">{lang ? 'Місто' : 'City:'}</p>
+            <p className="header__info-place">{lang ? 'Київ' : 'Kyiv'}</p>
           </div>
           <div className="header__search">
             {search.pathname !== '/' ? (
@@ -80,10 +98,28 @@ const Header = ({ searchChageHandle, searchValue }) => {
               />
             ) : (
               <div className="header__lang">
-                <button className="header__lang-button header__lang-button_active">
+                <button
+                  disabled={!lang}
+                  className={
+                    lang
+                      ? `header__lang-button`
+                      : `header__lang-button ${langActive}`
+                  }
+                  onClick={handleLangHange}
+                >
                   En
                 </button>
-                <button className="header__lang-button">Ua</button>
+                <button
+                  disabled={lang}
+                  className={
+                    lang
+                      ? `header__lang-button ${langActive}`
+                      : `header__lang-button`
+                  }
+                  onClick={handleLangHange}
+                >
+                  Ua
+                </button>
               </div>
             )}
           </div>

@@ -1,5 +1,9 @@
+import { useSelector } from 'react-redux';
+
 const PreFooter = () => {
-  return (
+  const lang = useSelector((state) => state.lang.type);
+
+  const enFooter = (
     <section className="shop-center__pre-footer pre-footer">
       <p className="pre-footer__title">Order sushi in Kiyv</p>
       <p className="pre-footer__text">
@@ -27,6 +31,37 @@ const PreFooter = () => {
       </p>
     </section>
   );
+
+  const uaFooter = (
+    <section className="shop-center__pre-footer pre-footer">
+      <p className="pre-footer__title">Замовити суші в Києві</p>
+      <p className="pre-footer__text">
+        Ресторан «Суші і локшина» пропонує своїм клієнтам найсмачніше суші з
+        доставкою додому, приготовані за класичними та адаптованими до Рецепти
+        європейської аудиторії, а також власні розробки кухарів. ми цінуємо час
+        наших клієнтів, тому ви можете замовити суші в Києві у доставка додому
+        або в офіс .
+      </p>
+      <p className="pre-footer__text">У нашому меню більше 20 видів суші:</p>
+      <ul className="pre-footer__list">
+        <li className="pre-footer__li">
+          Класичний з сирим лососем, тунцем, окунем.
+        </li>
+        <li className="pre-footer__li">
+          Екзотика з тигровою креветкою, гребінцем.
+        </li>
+        <li className="pre-footer__li">Гострий з копченим лососем, вугром.</li>
+      </ul>
+      <p className="pre-footer__text">
+        Також в меню є гункани: фаршировані червоною ікрою і тобіко, ас а також
+        фелікс, де японський майонез поєднується з рибою, морепродуктами, вугор.
+        Любителі гострого можуть купити суші з соусом спайсі. Популярні топінги
+        копчена курка, сніжний краб, креветки, гребінці, тунець, лосось і окунь.
+      </p>
+    </section>
+  );
+
+  return lang ? uaFooter : enFooter;
 };
 
 export default PreFooter;

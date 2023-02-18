@@ -1,20 +1,22 @@
-import { useForm } from "react-hook-form";
-import { useEffect, useRef, useState } from "react";
-import { useSelector } from "react-redux";
+import { useForm } from 'react-hook-form';
+import { useEffect, useRef, useState } from 'react';
+import { useSelector } from 'react-redux';
 
-import { useScreenWidth } from "../hooks/useScreenWidth";
-import PreFooter from "../componetns/PreFooter";
-import OrderPopup from "../componetns/OrderPopup";
-import FooterMobile from "../componetns/FooterMobile";
+import { useScreenWidth } from '../hooks/useScreenWidth';
+import PreFooter from '../componetns/PreFooter';
+import OrderPopup from '../componetns/OrderPopup';
+import FooterMobile from '../componetns/FooterMobile';
 
 const Order = () => {
-  const orderItemOn = "order__radio-item_on";
+  const orderItemOn = 'order__radio-item_on';
   const orderFinal = useSelector((state) => state.cart);
+  const lang = useSelector((state) => state.lang.type);
+
   const { cartItems, totalCount, totalSumm } = orderFinal;
   const [dataOrder, setDataOrder] = useState();
   const [orderPopup, setOrderPopup] = useState(false);
-  const orderPopUpActive = "popup-box_active";
-  const orderPopUpBackActive = "popup-order__dark-backgound_on";
+  const orderPopUpActive = 'popup-box_active';
+  const orderPopUpBackActive = 'popup-order__dark-backgound_on';
 
   const widowSize = useScreenWidth();
 
@@ -55,37 +57,37 @@ const Order = () => {
 
   useEffect(() => {
     if (payment.cash) {
-      setValue("card", false);
+      setValue('card', false);
     }
   }, [payment.cash, setValue]);
 
   useEffect(() => {
     if (payment.card) {
-      setValue("cash", false);
+      setValue('cash', false);
     }
   }, [payment.card, setValue]);
 
   useEffect(() => {
     if (delivery.courier) {
-      setValue("pickup", false);
+      setValue('pickup', false);
     }
   }, [delivery.courier, setValue]);
 
   useEffect(() => {
     if (delivery.pickup) {
-      setValue("courier", false);
+      setValue('courier', false);
     }
   }, [delivery.pickup, setValue]);
 
   useEffect(() => {
     if (shippingTime.toNow) {
-      setValue("forAWhile", false);
+      setValue('forAWhile', false);
     }
   }, [shippingTime.toNow, setValue]);
 
   useEffect(() => {
     if (shippingTime.forAWhile) {
-      setValue("toNow", false);
+      setValue('toNow', false);
     }
   }, [shippingTime.forAWhile, setValue]);
 
@@ -103,18 +105,19 @@ const Order = () => {
           onSubmit={handleSubmit(onSomeSubmit)}
           style={{ position: `relative` }}
         >
-          <p className="order__title-label">Your data</p>
+          <p className="order__title-label">
+            {lang ? 'Ваші дані' : 'Your data'}
+          </p>
           <div className="order__content-box">
             <div className="order__item">
               <div className="order__input-block">
                 <div className="order__input-box">
                   <input
-                    placeholder="
-                   Telephone"
+                    placeholder={lang ? 'Телефон' : 'Telephone'}
                     className="order__input"
                     type="telephone"
-                    {...register("telephone", {
-                      required: "+00(000)000-00-00",
+                    {...register('telephone', {
+                      required: '+00(000)000-00-00',
                       pattern: /^\+\d{2}\(\d{3}\)\d{3}-\d{2}-\d{2}$/,
                     })}
                   />
@@ -124,17 +127,19 @@ const Order = () => {
                 </div>
                 <div className="order__input-box">
                   <input
-                    placeholder="Your name"
+                    placeholder={lang ? "Ваше ім'я" : 'Your name'}
                     className="order__input"
                     type="userName"
-                    {...register("userName", {
-                      required: "User name is required!",
+                    {...register('userName', {
+                      required: 'User name is required!',
                       maxLength: 10,
                       pattern: /^[A-Za-z]+$/i,
                     })}
                   />
                   {errors.userName && (
-                    <p className="order__errors">Name up to 10 letters</p>
+                    <p className="order__errors">
+                      {lang ? "Ім'я до 10 літер" : 'Name up to 10 letters'}
+                    </p>
                   )}
                 </div>
               </div>
@@ -145,7 +150,7 @@ const Order = () => {
                       className={` ${
                         payment.cash
                           ? `order__radio-item ${orderItemOn}`
-                          : "order__radio-item"
+                          : 'order__radio-item'
                       }`}
                     >
                       <input
@@ -153,10 +158,10 @@ const Order = () => {
                         name="payment"
                         type="radio"
                         value="cash"
-                        {...register("cash", {
+                        {...register('cash', {
                           required: !payment.card && !payment.cash,
                         })}
-                        placeholder="cash"
+                        placeholder={lang ? 'готівка' : 'cash'}
                       />
                       <svg
                         width="22"
@@ -186,10 +191,14 @@ const Order = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p className="order__radio-item-text">Cash</p>
+                      <p className="order__radio-item-text">
+                        {lang ? 'Готівка' : 'Cash'}
+                      </p>
                     </button>
                     {errors.cash && errors.card && (
-                      <p className="order__errors">Field is required</p>
+                      <p className="order__errors">
+                        {lang ? 'Необхідно заповнити' : 'Field is required'}
+                      </p>
                     )}
                   </div>
                   <div className="order__input-box">
@@ -197,7 +206,7 @@ const Order = () => {
                       className={` ${
                         payment.card
                           ? `order__radio-item ${orderItemOn}`
-                          : "order__radio-item"
+                          : 'order__radio-item'
                       }`}
                     >
                       <input
@@ -205,11 +214,11 @@ const Order = () => {
                         name="payment"
                         type="radio"
                         value="card"
-                        {...register("card", {
+                        {...register('card', {
                           required: !payment.cash && !payment.card,
                         })}
                         className="order__payment"
-                        placeholder="card"
+                        placeholder={lang ? 'карткою' : 'card'}
                       />
                       <svg
                         width="22"
@@ -246,10 +255,14 @@ const Order = () => {
                           </clipPath>
                         </defs>
                       </svg>
-                      <p className="order__radio-item-text">Card</p>
+                      <p className="order__radio-item-text">
+                        {lang ? 'Карткою' : 'Card'}
+                      </p>
                     </button>
                     {errors.card && errors.cash && (
-                      <p className="order__errors">Field is required</p>
+                      <p className="order__errors">
+                        {lang ? 'Необхідно заповнити' : 'Field is required'}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -257,27 +270,35 @@ const Order = () => {
               <div className="order__input-box">
                 <input
                   type="comment"
-                  {...register("comment", {
+                  {...register('comment', {
                     maxLength: 100,
                   })}
                   className="order__comment"
-                  placeholder="Comment to the order..."
+                  placeholder={
+                    lang
+                      ? 'Коментар до замовлення...'
+                      : 'Comment to the order...'
+                  }
                 />
                 {errors.comment && (
-                  <p className="order__errors">Max symbols 100</p>
+                  <p className="order__errors">
+                    {lang ? 'До 100 символів' : 'Max symbols 100'}
+                  </p>
                 )}
               </div>
               <div className="order__input-box">
                 <input
-                  {...register("promocode", {
+                  {...register('promocode', {
                     maxLength: 8,
                   })}
                   type="promocode"
-                  placeholder="Enter promo code"
+                  placeholder={lang ? 'Промо код...' : 'Enter promo code'}
                   className="order__input"
                 />
                 {errors.promocode && (
-                  <p className="order__errors">Max symbols 8</p>
+                  <p className="order__errors">
+                    {lang ? 'До 8 символів' : 'Max symbols 8'}
+                  </p>
                 )}
               </div>
             </div>
@@ -289,20 +310,24 @@ const Order = () => {
                       className={` ${
                         delivery.courier
                           ? `order__radio-item ${orderItemOn}`
-                          : "order__radio-item"
+                          : 'order__radio-item'
                       }`}
                     >
                       <input
                         type="radio"
                         value="courier"
-                        {...register("courier", {
+                        {...register('courier', {
                           required: !delivery.pickup && !delivery.courier,
                         })}
                       />
-                      <p className="order__radio-item-text">By courier</p>
+                      <p className="order__radio-item-text">
+                        {lang ? 'Курʼєром' : 'By courier'}
+                      </p>
                     </button>
                     {errors.courier && errors.pickup && (
-                      <p className="order__errors">Field is required</p>
+                      <p className="order__errors">
+                        {lang ? 'Необхідно заповнити' : 'Field is required'}
+                      </p>
                     )}
                   </div>
                   <div className="order__input-box">
@@ -310,20 +335,24 @@ const Order = () => {
                       className={` ${
                         delivery.pickup
                           ? `order__radio-item ${orderItemOn}`
-                          : "order__radio-item"
+                          : 'order__radio-item'
                       }`}
                     >
                       <input
                         type="radio"
                         value="pickup"
-                        {...register("pickup", {
+                        {...register('pickup', {
                           required: !delivery.courier && !delivery.pickup,
                         })}
                       />
-                      <p className="order__radio-item-text">Pickup</p>
+                      <p className="order__radio-item-text">
+                        {lang ? 'Самовивіз' : 'Pickup'}
+                      </p>
                     </button>
                     {errors.courier && errors.pickup && (
-                      <p className="order__errors">Field is required</p>
+                      <p className="order__errors">
+                        {lang ? 'Необхідно заповнити' : 'Field is required'}
+                      </p>
                     )}
                   </div>
                 </div>
@@ -332,31 +361,35 @@ const Order = () => {
                 <div className="order__input-box">
                   <input
                     disabled={delivery.pickup}
-                    {...register("street", {
+                    {...register('street', {
                       required: delivery.pickup ? false : true,
                       maxLength: 20,
                     })}
                     type="street"
-                    placeholder="Street"
+                    placeholder={lang ? 'Вулиця' : 'Street'}
                     className="order__input"
                   />
                   {errors.street && delivery.courier && (
-                    <p className="order__errors">Street is required!</p>
+                    <p className="order__errors">
+                      {lang ? 'Назва вулиці' : 'Street is required!'}
+                    </p>
                   )}
                 </div>
                 <div className="order__input-box">
                   <input
                     disabled={delivery.pickup}
-                    {...register("house", {
+                    {...register('house', {
                       required: delivery.pickup ? false : true,
                       maxLength: 4,
                     })}
                     type="house"
-                    placeholder="House"
+                    placeholder={lang ? 'Будинок' : 'House'}
                     className="order__input"
                   />
                   {errors.house && delivery.courier && (
-                    <p className="order__errors">House is required!</p>
+                    <p className="order__errors">
+                      {lang ? 'Номер будинку' : 'House is required!'}
+                    </p>
                   )}
                 </div>
               </div>
@@ -366,21 +399,25 @@ const Order = () => {
                     className={` ${
                       shippingTime.toNow
                         ? `order__radio-item ${orderItemOn}`
-                        : "order__radio-item"
+                        : 'order__radio-item'
                     }`}
                   >
                     <input
                       type="radio"
                       value="toNow"
-                      {...register("toNow", {
+                      {...register('toNow', {
                         required:
                           !shippingTime.forAWhile && !shippingTime.toNow,
                       })}
                     />
-                    <p className="order__radio-item-text">To now</p>
+                    <p className="order__radio-item-text">
+                      {lang ? 'Зараз' : 'To now'}
+                    </p>
                   </button>
                   {errors.toNow && errors.forAWhile && (
-                    <p className="order__errors">Field is required</p>
+                    <p className="order__errors">
+                      {lang ? 'Необхідно заповнити' : 'Field is required'}
+                    </p>
                   )}
                 </div>
                 <div className="order__input-box">
@@ -388,54 +425,67 @@ const Order = () => {
                     className={` ${
                       shippingTime.forAWhile
                         ? `order__radio-item ${orderItemOn}`
-                        : "order__radio-item"
+                        : 'order__radio-item'
                     }`}
                   >
                     <input
                       type="radio"
                       value="forAWhile"
-                      {...register("forAWhile", {
+                      {...register('forAWhile', {
                         required:
                           !shippingTime.toNow && !shippingTime.forAWhile,
                       })}
                     />
-                    <p className="order__radio-item-text">For a while</p>
+                    <p className="order__radio-item-text">
+                      {lang ? 'На час' : 'For a while'}
+                    </p>
                   </button>
                   {errors.toNow && errors.forAWhile && (
-                    <p className="order__errors">Field is required</p>
+                    <p className="order__errors">
+                      {lang ? 'Необхідно заповнити' : 'Field is required'}
+                    </p>
                   )}
                 </div>
               </div>
               <input
                 type="email"
-                {...register("email", {
+                {...register('email', {
                   pattern:
                     /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/,
                 })}
-                placeholder="E-mail(
-                  Not necessary)"
+                placeholder={
+                  lang
+                    ? "E-mail не обов'язково"
+                    : 'E-mail(\
+                  Not necessary)'
+                }
                 className="order__email"
               />
             </div>
           </div>
           {widowSize.width < 991.98 && (
             <div className="cart__bottom">
-              <p className="cart__bottom-title">Total</p>
+              <p className="cart__bottom-title">{lang ? 'Всього' : 'Total'}</p>
               <div className="cart__total-count">
-                <p className="cart__total-count-title">Amount</p>
-                <p className="cart__total-count-value">{totalCount} goods</p>
+                <p className="cart__total-count-title">
+                  {lang ? 'Кількість' : 'Amount'}
+                </p>
+                <p className="cart__total-count-value">
+                  {totalCount} {lang ? 'од.' : 'goods'}
+                </p>
               </div>
               <div className="cart__total-sum">
-                <p className=" cart__total-sum_cart-in-order">Sum</p>
+                <p className=" cart__total-sum_cart-in-order">
+                  {lang ? 'Сума' : 'Sum'}
+                </p>
                 <p className="cart__total-sum_cart-in-order">{totalSumm} ₴</p>
               </div>
             </div>
           )}
-
           <div
             ref={popupRef}
             className={`${
-              orderPopup ? `popup-box ${orderPopUpActive}` : "popup-box"
+              orderPopup ? `popup-box ${orderPopUpActive}` : 'popup-box'
             }`}
           >
             <div
@@ -460,7 +510,7 @@ const Order = () => {
             onClick={popupHandler}
             ref={buttonRef}
           >
-            Checkout
+            {lang ? 'Розрахунок' : 'Checkout'}
           </button>
           {widowSize.width < 991.98 && <FooterMobile />}
         </form>

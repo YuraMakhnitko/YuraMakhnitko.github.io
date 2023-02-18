@@ -1,25 +1,16 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice } from '@reduxjs/toolkit';
 
-import goodsItems from "../settings/goodsData.json";
-import goodsItemsToSet from "../settings/goodsData.json";
-
-// const goodsFromFetch = fetch("http://localhost:3000/goodsData.json")
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .then((res) => {
-//     return res;
-//   });
-
-// console.log(goodsFromFetch);
+import goodsItems from '../settings/goodsData.json';
+import goodsItemsToSet from '../settings/goodsData.json';
 
 const goodsToSet = JSON.parse(JSON.stringify(goodsItemsToSet));
 
 const category = {
-  title: "Pizza",
+  title: 'Pizza',
+  titleUa: 'Піца',
   categoryId: 1,
-  imgUrl: "img/icons/pizza.svg",
-  imgBigUrl: "img/categories/pizza.jpg",
+  imgUrl: 'img/icons/pizza.svg',
+  imgBigUrl: 'img/categories/pizza.jpg',
   isSoon: false,
 };
 
@@ -30,11 +21,16 @@ const goodsBoofer = goodsItems.filter(
   (good) => good.category === category.categoryId
 );
 
-const sort = { titleFilter: "By default", field: null, desk: 0 };
+const sort = {
+  titleFilter: 'By default',
+  titleFilterUa: 'Початкове',
+  field: null,
+  desk: 0,
+};
 
 const initialState = {
   category,
-  searchValue: "",
+  searchValue: '',
   sort,
   openPopUp: false,
   goodsToSet,
@@ -43,7 +39,7 @@ const initialState = {
 };
 
 export const filterSlice = createSlice({
-  name: "filters",
+  name: 'filters',
   initialState,
   reducers: {
     setCategory(state, action) {
@@ -70,7 +66,8 @@ export const filterSlice = createSlice({
     },
     setSort(state, action) {
       state.sort = action.payload;
-      state.sort.titleFilter !== "By default"
+      state.sort.titleFilter !== 'By default' &&
+      state.sort.titleFilter !== 'Початкове'
         ? (state.goodsSetted = state.goodsSetted.sort((a, b) =>
             a[state.sort.field] > b[state.sort.field]
               ? 1 * state.sort.desk

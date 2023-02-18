@@ -18,6 +18,7 @@ const GoodsCard = () => {
   const cardItem = useSelector((state) => state.card.cardItem);
   const category = useSelector((state) => state.filter.category);
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const lang = useSelector((state) => state.lang.type);
 
   const mainRef = useRef();
 
@@ -42,9 +43,11 @@ const GoodsCard = () => {
   const dispatch = useDispatch();
 
   let goodMeasuring = 'gramm';
+  let goodMeasuringUa = 'грам';
 
   if (cardItem.category === 9) {
     goodMeasuring = 'ml volume';
+    goodMeasuringUa = "мл об'єм";
   }
 
   const addItemHandle = (item) => {
@@ -84,7 +87,9 @@ const GoodsCard = () => {
                   strokeLinecap="round"
                 />
               </svg>
-              <p className="page-card__button-text">Back</p>
+              <p className="page-card__button-text">
+                {lang ? 'Повернутися' : 'Back'}
+              </p>
             </Link>
           </div>
         </div>
@@ -98,9 +103,11 @@ const GoodsCard = () => {
                   </div>
                 </div>
                 <div className="card__info">
-                  <p className="card__title">{item.title}</p>
+                  <p className="card__title">
+                    {lang ? item.titleUa : item.title}
+                  </p>
                   <p className="card__wight">
-                    {item.weight} {goodMeasuring}
+                    {item.weight} {lang ? goodMeasuringUa : goodMeasuring}
                   </p>
                   <div className="card__item-bottom">
                     <p className="card__price">{cardItem.price} ₴</p>
@@ -117,8 +124,12 @@ const GoodsCard = () => {
                       />
                     </div>
                   </div>
-                  <p className="card__stuff">Сomposition</p>
-                  <p className="card__info-staff">{item.composition}</p>
+                  <p className="card__stuff">
+                    {lang ? 'Склад' : 'Сomposition'}
+                  </p>
+                  <p className="card__info-staff">
+                    {lang ? item.compositionUa : item.composition}
+                  </p>
 
                   <button
                     onClick={() => addItemHandle(item)}

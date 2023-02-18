@@ -1,34 +1,45 @@
-import { BsFillXCircleFill } from "react-icons/bs";
-import { useSelector } from "react-redux";
+import { BsFillXCircleFill } from 'react-icons/bs';
+import { useSelector } from 'react-redux';
 
 const OrderPopup = ({ userName, telephone, setOrderPopup }) => {
   const { totalSumm, totalCount } = useSelector((state) => state.cart);
+  const lang = useSelector((state) => state.lang.type);
 
   return (
     <div className="popup-order">
       <div className="popup-order__popup-container">
         <p className="popup-order__popup-title">
-          Hello, dear mister {userName}
+          {lang ? 'Вітаємо' : 'Hello, dear'} {userName}
         </p>
         <p className="popup-order__popup-subtitle">
-          Your order successfully placed!
+          {lang
+            ? 'Ваше замовлення успішно зареєстровано!'
+            : 'Your order successfully placed!'}
         </p>
         <div className="popup-order__line"></div>
         <p className="popup-order__popup-text">
-          Total amount of goods: <span>{totalCount}</span>
+          {lang ? 'Загальна кількість товарів' : 'Total amount of goods:'}{' '}
+          <span>{totalCount}</span>
         </p>
         <p className="popup-order__popup-text">
-          Total sum: <span>{totalSumm}</span> ₴
+          {lang ? 'Загальна сума:' : 'Total sum:'} <span>{totalSumm}</span> ₴
         </p>
         <p className="popup-order__popup-text">
-          Your phone number: <span>{telephone}</span>
+          {lang ? 'Ваш телефон:' : 'Your phone number:'}{' '}
+          <span>{telephone}</span>
         </p>
         <p className="popup-order__popup-text">
-          We will contact you soon for clarification.
+          {lang
+            ? 'Скоро ми з Вами звʼяжемося для уточнень'
+            : 'We will contact you soon for clarification.'}
         </p>
         <div className="popup-order__line"></div>
         <p className="popup-order__popup-text">
-          <span>Thank you for your order!</span>
+          <span>
+            {lang
+              ? 'Дякуємо за замовлення 😊!'
+              : 'Thank you for your order 😊!'}
+          </span>
         </p>
         <button
           className="popup-order__close-button"

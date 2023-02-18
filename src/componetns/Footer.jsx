@@ -1,39 +1,45 @@
-import { useLocation } from "react-router";
+import { useLocation } from 'react-router';
+import { useSelector } from 'react-redux';
 
 const Footer = () => {
   const footerLocation = useLocation();
+  const lang = useSelector((state) => state.lang.type);
 
   console.log(footerLocation.pathname);
   // {footerLocation.pathname !=="/cart" && }
 
   return (
     <>
-      {footerLocation.pathname !== "/cart" && (
+      {footerLocation.pathname !== '/cart' && (
         <footer className="footer">
           <div className="footer__items">
             <div className="footer__links">
               <a href="#" className="footer__link">
-                About us
+                {lang ? 'Про нас' : 'About us'}
               </a>
               <a href="#" className="footer__link">
-                Shipping and payment
+                {lang ? 'Доставка та оплата' : 'Shipping and payment'}
               </a>
               <a href="#" className="footer__link">
-                Material Tape
+                {lang ? 'Оновлення' : 'Material Tape'}
               </a>
               <a href="#" className="footer__link">
-                Return policy
+                {lang ? 'Повернення' : 'Return policy'}
               </a>
             </div>
             <div className="footer__contacts">
-              <p className="footer__contacts-text">Contacts</p>
+              <p className="footer__contacts-text">
+                {lang ? 'Контакти' : 'Contacts'}
+              </p>
               <a href="#" className="footer__phone">
-                Tel:+00 000 000 955{" "}
+                Tel:+00 000 000 955{' '}
               </a>
               <a href="#" className="footer__phone">
-                Tel:+00 000 000 955{" "}
+                Tel:+00 000 000 955{' '}
               </a>
-              <p className="footer__contacts-text">Adress: Big Street 000</p>
+              <p className="footer__contacts-text">
+                {lang ? 'Адреса: вул. Велика ХХХ' : 'Adress: Big Street XXX'}
+              </p>
             </div>
             <div className="footer__messengers">
               <a href="#" className="footer__link-messenger">
@@ -118,7 +124,6 @@ const Footer = () => {
         </footer>
       )}
     </>
-    // {footerLocation.pathname !=="/cart" && }
   );
 };
 

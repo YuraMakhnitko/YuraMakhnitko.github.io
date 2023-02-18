@@ -1,26 +1,36 @@
-import { Link } from "react-router-dom";
+import { Link } from 'react-router-dom';
 
-import { useDispatch } from "react-redux";
-import { setGoodCard } from "../../redux/goodCard/slice";
-import { setCartItem, setInc } from "../../redux/cart/slice";
+import { useDispatch } from 'react-redux';
+import { setGoodCard } from '../../redux/goodCard/slice';
+import { setCartItem, setInc } from '../../redux/cart/slice';
+import { useSelector } from 'react-redux';
 
 const GoodsItem = ({ good }) => {
-  const { title, weight, pieces, category, price, id, imgUrl } = good;
+  const lang = useSelector((state) => state.lang.type);
+  const { title, weight, pieces, category, price, id, imgUrl, titleUa } = good;
+
+  console.log(titleUa);
 
   const dispatch = useDispatch();
 
-  let goodInfoForSmallCard = "pieses";
-  let goodMeasuring = "gramm";
+  let goodInfoForSmallCard = 'pieses';
+  let goodInfoForSmallCardUa = 'шматочків';
+  let goodMeasuring = 'gramm';
+  let goodMeasuringUa = 'грам';
 
   if (category === 1) {
-    goodInfoForSmallCard = "sm size";
+    goodInfoForSmallCard = 'sm size';
+    goodInfoForSmallCardUa = 'см.';
   }
   if (category === 9) {
-    goodInfoForSmallCard = "glass";
-    goodMeasuring = "ml volume";
+    goodInfoForSmallCard = 'glass';
+    goodInfoForSmallCardUa = 'склянка';
+    goodMeasuring = 'ml volume';
+    goodMeasuringUa = "мл об'єм";
   }
   if (category === 8 || category === 3) {
-    goodInfoForSmallCard = "portion";
+    goodInfoForSmallCard = 'portion';
+    goodInfoForSmallCardUa = 'порція';
   }
 
   const onHandleAdd = () => {
@@ -32,7 +42,7 @@ const GoodsItem = ({ good }) => {
     <div className="good-card">
       <div className="good-card__image-ibg">
         <Link
-          to={"/card"}
+          to={'/card'}
           className="good-card__link"
           onClick={() => dispatch(setGoodCard({ ...good }))}
         >
@@ -41,9 +51,10 @@ const GoodsItem = ({ good }) => {
       </div>
       <div className="good-card__top">
         <div className="good-card__text-box">
-          <p className="good-card__title">{title}</p>
+          <p className="good-card__title">{lang ? titleUa : title}</p>
           <p className="good-card__info">
-            {weight} {goodMeasuring}, {pieces} {goodInfoForSmallCard}
+            {weight} {lang ? goodMeasuringUa : goodMeasuring}, {pieces}{' '}
+            {lang ? goodInfoForSmallCardUa : goodInfoForSmallCard}
           </p>
         </div>
         <div className="good-card__item-bottom">
@@ -52,7 +63,7 @@ const GoodsItem = ({ good }) => {
             onClick={onHandleAdd}
             className="good-card__button button-goods"
           >
-            <span>Want!</span>
+            <span>{lang ? 'Хочу!' : 'Want!'}</span>
           </button>
         </div>
       </div>

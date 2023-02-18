@@ -1,8 +1,9 @@
-import { Link } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 const FooterMobile = () => {
   const totalCount = useSelector((state) => state.cart.totalCount);
+  const lang = useSelector((state) => state.lang.type);
 
   return (
     <div className="cart-icons-mobile">
@@ -23,7 +24,7 @@ const FooterMobile = () => {
             </svg>
           </button>
         </Link>
-        <p>Menu</p>
+        <p>{lang ? 'Меню' : 'Menu'}</p>
       </div>
       <div className="cart-icons-mobile__item">
         <Link to="/cart">
@@ -54,7 +55,7 @@ const FooterMobile = () => {
             </svg>
           </button>
         </Link>
-        <p>Cart</p>
+        <p>{lang ? 'Кошик' : 'Cart'}</p>
         {totalCount > 0 && (
           <div className="cart-icons-mobile__bunner">
             <p className="cart-icons-mobile__bunner-value">{totalCount}</p>

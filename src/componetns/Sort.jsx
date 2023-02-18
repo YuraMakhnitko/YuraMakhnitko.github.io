@@ -1,20 +1,24 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect } from 'react';
 
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from 'react-redux';
 
-import sortItems from "../redux/settings/sortList.json";
-import { setSort, setOpenPopUp } from "../redux/filter/slice";
+import sortItems from '../redux/settings/sortList.json';
+import { setSort, setOpenPopUp } from '../redux/filter/slice';
 
 const sortList = JSON.parse(JSON.stringify(sortItems));
 
-const popupClassListClosed = "popup-sort__box popup-sort__box_closed";
-const popupClassList = "popup-sort__box";
+const popupClassListClosed = 'popup-sort__box popup-sort__box_closed';
+const popupClassList = 'popup-sort__box';
 
 const Sort = () => {
   const dispatch = useDispatch();
   const openPopUp = useSelector((state) => state.filter.openPopUp);
-  const { titleFilter } = useSelector((state) => state.filter.sort);
+  const lang = useSelector((state) => state.lang.type);
+  const { titleFilter, titleFilterUa } = useSelector(
+    (state) => state.filter.sort
+  );
 
+  console.log(lang);
   const ref = useRef();
 
   const onClickCloseHandle = (sort) => {
@@ -34,9 +38,9 @@ const Sort = () => {
           }
           dispatch(setOpenPopUp(false));
         };
-        document.addEventListener("click", listener);
+        document.addEventListener('click', listener);
         return () => {
-          document.removeEventListener("click", listener);
+          document.removeEventListener('click', listener);
         };
       }
     }, [ref, openPopUp]);
@@ -50,9 +54,13 @@ const Sort = () => {
     >
       <div className={`${openPopUp ? popupClassList : popupClassListClosed}`}>
         <div className="popup-sort__top">
-          <p className="popup-sort__title">Sorting</p>
+          {!lang ? (
+            <p className="popup-sort__title">Sorting</p>
+          ) : (
+            <p className="popup-sort__title">Сорування</p>
+          )}
           <p className="popup-sort__type" onClick={popUpOpenHandle}>
-            {titleFilter}
+            {lang ? titleFilterUa : titleFilter}
           </p>
         </div>
         {openPopUp && (
@@ -65,7 +73,7 @@ const Sort = () => {
                   key={ind}
                 >
                   <a href="#" className="popup-sort__item-link">
-                    {sort.titleFilter}
+                    {lang ? sort.titleFilterUa : sort.titleFilter}
                   </a>
                 </li>
               ))}
