@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 
 const PreFooter = () => {
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const enFooter = (
     <section className="shop-center__pre-footer pre-footer">

@@ -25,6 +25,12 @@
   border-radius: 5px;
   text-align: center;
   padding-top: 12px;
+  @media (max-width: 1150.98px) {
+    width: 270px;
+  }
+  @media (max-width: 991.98px) {
+    width: 100%;
+  }
 
   // .cart-empty__title
 

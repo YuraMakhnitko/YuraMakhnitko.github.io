@@ -1,20 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import goodsItems from '../settings/goodsData.json';
-import goodsItemsToSet from '../settings/goodsData.json';
-
-// const goodsFromFetch = fetch("http://localhost:3000/goodsData.json")
-//   .then((res) => {
-//     return res.json();
-//   })
-//   .then((res) => {
-//     return res;
-//   });
-
-// console.log(goodsFromFetch);
-
-const goodsToSet = JSON.parse(JSON.stringify(goodsItemsToSet));
-
 const initialState = {
   type: false,
 };

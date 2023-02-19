@@ -75,12 +75,15 @@
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 10px;
-    font-family: "DINPro";
+    font-family: 'DINPro';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 1.25;
     color: #111111;
+    @media (max-width: 386px) {
+      font-size: 16px;
+    }
     &:focus {
       outline: 0.5px solid rgba(164, 172, 173, 0.2);
     }
@@ -117,7 +120,7 @@
         fill: white;
       }
     }
-    [type="radio"] {
+    [type='radio'] {
       position: absolute;
       opacity: 0;
       height: 100%;
@@ -128,12 +131,12 @@
   // .order__radio-item-text
 
   &__radio-item-text {
-    font-family: "DINPro";
+    font-family: 'DINPro';
     font-size: 18px;
     line-height: 1.25;
   }
   &__comment {
-    font-family: "DINPro";
+    font-family: 'DINPro';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -157,7 +160,7 @@
     padding-top: 9px;
     padding-bottom: 9px;
     padding-left: 10px;
-    font-family: "DINPro";
+    font-family: 'DINPro';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -180,8 +183,9 @@
 .popup-box {
   display: flex;
   position: absolute;
-  bottom: 0;
+  bottom: 0%;
   left: 50%;
+  z-index: 50;
   transition: transform 0.2s ease 0s;
   transform: translate(-50%, 0%) scale(0.0001);
 
@@ -191,9 +195,14 @@
     border-radius: 12px;
     width: 100%;
     max-width: 90%;
+    @media (max-width: 991.98px) {
+      transform: translate(-50%, -30%) scale(1);
+    }
   }
 }
 .popup-order {
+  position: relative;
+  z-index: 50;
   display: inline-flex;
   justify-self: center;
   justify-content: center;
@@ -205,6 +214,7 @@
 
   &__dark-backgound {
     position: absolute;
+    z-index: 10;
     top: 0%;
     left: 0%;
     background-color: #000;
@@ -220,16 +230,20 @@
   }
 
   &__popup-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 12px;
     padding: 30px;
     color: #111111;
-    font-family: "DINPro";
+    font-family: 'DINPro';
     font-style: normal;
     z-index: 100;
     width: 100%;
+    @media (max-width: 768.98px) {
+      padding: 15px;
+    }
   }
 
   &__popup-title {

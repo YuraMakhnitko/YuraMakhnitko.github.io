@@ -1,24 +1,24 @@
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
+import { useEffect, useRef } from 'react';
+import Slider from 'react-slick';
 
 import { setCartItem, setInc } from '../redux/cart/slice';
 import { setCategory } from '../redux/filter/slice';
-import Slider from 'react-slick';
 
 import { useScreenWidth } from '../hooks/useScreenWidth';
 import PreFooter from '../componetns/PreFooter';
 import Counter from '../componetns/Counter';
 import FooterMobile from '../componetns/FooterMobile';
-import { useEffect, useRef } from 'react';
+import { selectFilter } from '../redux/filter/selectors';
 
 const GoodsCard = () => {
   const screenSize = useScreenWidth();
+  const { lang, category } = selectFilter;
 
   const cardItems = useSelector((state) => state.filter.goodsSetted);
   const cardItem = useSelector((state) => state.card.cardItem);
-  const category = useSelector((state) => state.filter.category);
   const cartItems = useSelector((state) => state.cart.cartItems);
-  const lang = useSelector((state) => state.lang.type);
 
   const mainRef = useRef();
 

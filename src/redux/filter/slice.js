@@ -36,6 +36,7 @@ const initialState = {
   goodsToSet,
   goodsBoofer,
   goodsSetted,
+  lang: false,
 };
 
 export const filterSlice = createSlice({
@@ -52,16 +53,20 @@ export const filterSlice = createSlice({
         (good) => good.category === state.category.categoryId
       );
     },
-    // setGoods(state, action) {
-    //   state.goodsSetted = action.payload;
-    // },
+
     setSearchValue(state, action) {
       state.searchValue = action.payload;
 
       state.searchValue
-        ? (state.goodsSetted = state.goodsBoofer.filter((item) =>
-            item.title.toLowerCase().includes(state.searchValue)
-          ))
+        ? state.lang
+          ? (state.goodsSetted = state.goodsBoofer.filter((item) =>
+              item.titleUa
+                .toLowerCase()
+                .includes(state.searchValue.toLowerCase())
+            ))
+          : (state.goodsSetted = state.goodsBoofer.filter((item) =>
+              item.title.toLowerCase().includes(state.searchValue.toLowerCase())
+            ))
         : (state.goodsSetted = state.goodsBoofer);
     },
     setSort(state, action) {
@@ -80,10 +85,19 @@ export const filterSlice = createSlice({
     setOpenPopUp(state, action) {
       state.openPopUp = action.payload;
     },
+    setLang(state, action) {
+      state.lang = action.payload;
+    },
   },
 });
 
-export const { setSearchValue, setSort, setOpenPopUp, setCategory, setGoods } =
-  filterSlice.actions;
+export const {
+  setSearchValue,
+  setSort,
+  setOpenPopUp,
+  setCategory,
+  setGoods,
+  setLang,
+} = filterSlice.actions;
 
 export default filterSlice.reducer;

@@ -11,7 +11,7 @@ const categories = JSON.parse(JSON.stringify(catgoriesList));
 const disabledStyle = 'sidebar-left__link_disabled';
 
 const CategoriesSideBar = () => {
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const dispatch = useDispatch();
 

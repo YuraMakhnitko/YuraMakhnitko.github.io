@@ -27,7 +27,7 @@ let settings = {
 const categories = JSON.parse(JSON.stringify(catgoriesList));
 
 const Home = () => {
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const dispatch = useDispatch();
   const disabledStyle = 'goods__link_disabled';

@@ -20,7 +20,7 @@ const Cart = () => {
   const cartItems = useSelector((state) => state.cart.cartItems);
   const totalSumm = useSelector((state) => state.cart.totalSumm);
   const totalCount = useSelector((state) => state.cart.totalCount);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const widowSize = useScreenWidth();
 

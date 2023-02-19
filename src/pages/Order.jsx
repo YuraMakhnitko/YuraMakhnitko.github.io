@@ -10,7 +10,7 @@ import FooterMobile from '../componetns/FooterMobile';
 const Order = () => {
   const orderItemOn = 'order__radio-item_on';
   const orderFinal = useSelector((state) => state.cart);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const { cartItems, totalCount, totalSumm } = orderFinal;
   const [dataOrder, setDataOrder] = useState();
@@ -133,7 +133,7 @@ const Order = () => {
                     {...register('userName', {
                       required: 'User name is required!',
                       maxLength: 10,
-                      pattern: /^[A-Za-z]+$/i,
+                      pattern: /^[а-яА-ЯёЁЇїІіЄєҐґa-zA-Z0-9]+$/i,
                     })}
                   />
                   {errors.userName && (

@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 import Slider from 'react-slick';
 
 export default function TopSlider({ slideItems, settings }) {
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   return (
     <Slider {...settings}>

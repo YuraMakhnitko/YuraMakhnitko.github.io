@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const FooterMobile = () => {
   const totalCount = useSelector((state) => state.cart.totalCount);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   return (
     <div className="cart-icons-mobile">

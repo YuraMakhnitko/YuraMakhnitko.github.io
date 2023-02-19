@@ -6,10 +6,9 @@ import { setCartItem, setInc } from '../../redux/cart/slice';
 import { useSelector } from 'react-redux';
 
 const GoodsItem = ({ good }) => {
-  const lang = useSelector((state) => state.lang.type);
-  const { title, weight, pieces, category, price, id, imgUrl, titleUa } = good;
+  const lang = useSelector((state) => state.filter.lang);
 
-  console.log(titleUa);
+  const { title, weight, pieces, category, price, id, imgUrl, titleUa } = good;
 
   const dispatch = useDispatch();
 

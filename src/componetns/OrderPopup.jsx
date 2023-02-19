@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux';
 
 const OrderPopup = ({ userName, telephone, setOrderPopup }) => {
   const { totalSumm, totalCount } = useSelector((state) => state.cart);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   return (
     <div className="popup-order">

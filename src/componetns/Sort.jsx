@@ -13,7 +13,8 @@ const popupClassList = 'popup-sort__box';
 const Sort = () => {
   const dispatch = useDispatch();
   const openPopUp = useSelector((state) => state.filter.openPopUp);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
+
   const { titleFilter, titleFilterUa } = useSelector(
     (state) => state.filter.sort
   );

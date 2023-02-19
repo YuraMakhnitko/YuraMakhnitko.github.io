@@ -32,6 +32,9 @@
     display: flex;
     flex-direction: column;
     gap: 15px;
+    @media (max-width: 396.98px) {
+      width: 210px;
+    }
   }
 
   // .footer__link
@@ -55,6 +58,9 @@
     color: #a4acad;
     @media (max-width: 500px) {
       padding-left: 0px;
+    }
+    @media (max-width: 396.98px) {
+      width: 210px;
     }
   }
 
@@ -81,6 +87,8 @@
 // =================FOOTER-MOBILE===============================================
 
 .cart-icons-mobile {
+  // position: relative;
+  // z-index: 0;
   padding-top: 15px;
   padding-bottom: 15px;
   display: flex;
@@ -136,6 +144,7 @@
 
   &__bunner {
     position: absolute;
+    // position: relative;
     top: 0;
     right: 0;
     transform: translate(9px, -8px);

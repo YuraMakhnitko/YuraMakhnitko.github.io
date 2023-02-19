@@ -3,10 +3,9 @@ import { useSelector } from 'react-redux';
 
 const Footer = () => {
   const footerLocation = useLocation();
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   console.log(footerLocation.pathname);
-  // {footerLocation.pathname !=="/cart" && }
 
   return (
     <>

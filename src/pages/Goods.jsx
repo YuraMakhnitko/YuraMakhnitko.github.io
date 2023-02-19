@@ -12,7 +12,7 @@ import PreFooter from '../componetns/PreFooter';
 const Goods = () => {
   const category = useSelector((state) => state.filter.category);
   const { goodsSetted } = useSelector((state) => state.filter);
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const windowSize = useScreenWidth();
   useEffect(() => {

@@ -5,7 +5,7 @@ import { useScreenWidth } from '../hooks/useScreenWidth';
 import { GiSushis } from 'react-icons/gi';
 
 import { useDispatch, useSelector } from 'react-redux';
-import { setLang } from '../redux/lang/slice';
+import { setLang } from '../redux/filter/slice';
 
 import Search from './Search';
 
@@ -14,7 +14,7 @@ const orderHeaderStyle = 'header__contacts_order';
 const Header = ({ searchChageHandle, searchValue }) => {
   const search = useLocation();
   const dispatsh = useDispatch();
-  const lang = useSelector((state) => state.lang.type);
+  const lang = useSelector((state) => state.filter.lang);
 
   const langActive = 'header__lang-button_active';
   console.log(lang);
