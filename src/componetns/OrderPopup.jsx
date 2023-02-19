@@ -1,5 +1,5 @@
-import { BsFillXCircleFill } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
+import { BsFillXCircleFill } from 'react-icons/bs';
 
 const OrderPopup = ({ userName, telephone, setOrderPopup }) => {
   const { totalSumm, totalCount } = useSelector((state) => state.cart);

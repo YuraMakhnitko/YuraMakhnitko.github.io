@@ -1,10 +1,11 @@
 import React from 'react';
 import { useLocation } from 'react-router';
 import { Link } from 'react-router-dom';
-import { useScreenWidth } from '../hooks/useScreenWidth';
+import { useDispatch, useSelector } from 'react-redux';
 import { GiSushis } from 'react-icons/gi';
 
-import { useDispatch, useSelector } from 'react-redux';
+import { useScreenWidth } from '../hooks/useScreenWidth';
+
 import { setLang } from '../redux/filter/slice';
 
 import Search from './Search';

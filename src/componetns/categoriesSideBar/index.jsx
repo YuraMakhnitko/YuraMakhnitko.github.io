@@ -1,8 +1,7 @@
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { setCategory } from '../../redux/filter/slice';
+import { useDispatch, useSelector } from 'react-redux';
 
-import { useSelector } from 'react-redux';
+import { setCategory } from '../../redux/filter/slice';
 
 import catgoriesList from '../../redux/settings/categories.json';
 

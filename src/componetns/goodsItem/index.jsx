@@ -1,9 +1,8 @@
 import { Link } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 
-import { useDispatch } from 'react-redux';
 import { setGoodCard } from '../../redux/goodCard/slice';
 import { setCartItem, setInc } from '../../redux/cart/slice';
-import { useSelector } from 'react-redux';
 
 const GoodsItem = ({ good }) => {
   const lang = useSelector((state) => state.filter.lang);

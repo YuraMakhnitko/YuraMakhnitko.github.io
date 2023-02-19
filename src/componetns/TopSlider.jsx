@@ -1,6 +1,5 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-
 import Slider from 'react-slick';
 
 export default function TopSlider({ slideItems, settings }) {
