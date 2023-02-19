@@ -10,16 +10,15 @@ import { useScreenWidth } from '../hooks/useScreenWidth';
 import PreFooter from '../componetns/PreFooter';
 import Counter from '../componetns/Counter';
 import FooterMobile from '../componetns/FooterMobile';
-import { selectFilter } from '../redux/filter/selectors';
 
 const GoodsCard = () => {
   const screenSize = useScreenWidth();
-  const { category } = selectFilter;
 
   const cardItems = useSelector((state) => state.filter.goodsSetted);
   const cardItem = useSelector((state) => state.card.cardItem);
   const cartItems = useSelector((state) => state.cart.cartItems);
   const lang = useSelector((state) => state.filter.lang);
+  const category = useSelector((state) => state.filter.category);
 
   const mainRef = useRef();
 
