@@ -71,8 +71,13 @@ export const filterSlice = createSlice({
     },
     setSort(state, action) {
       state.sort = action.payload;
+
+      if (state.lang && state.sort.field === 'title') {
+        state.sort.field = 'titleUa';
+      }
+
       state.sort.titleFilter !== 'By default' &&
-      state.sort.titleFilter !== 'Початкове'
+      state.sort.titleFilterUa !== 'Початкове'
         ? (state.goodsSetted = state.goodsSetted.sort((a, b) =>
             a[state.sort.field] > b[state.sort.field]
               ? 1 * state.sort.desk
